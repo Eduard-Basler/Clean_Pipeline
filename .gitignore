@@ -1,0 +1,4 @@
+.pixi/
+*.tif
+*.tiff
+*.nd2

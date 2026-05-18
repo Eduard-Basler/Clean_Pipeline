@@ -1,0 +1,54 @@
+[workspace]
+name = "final_sorted"
+version = "0.1.0"
+channels = ["conda-forge", "pytorch", "nvidia", "bioconda"]
+platforms = ["linux-64"]
+
+[system-requirements]
+cuda = "13.2"
+
+[dependencies]
+python = "3.11.*"
+pip = "*"
+numpy = "<2.0.0"
+scipy = "*"
+pandas = ">=3.0.2,<4"
+matplotlib = "==3.10.8"
+scikit-image = ">=0.26.0,<0.27"
+scikit-learn = "*"
+cuda-version = "13.2.*"
+cupy = "*"
+zarr = "*"
+tifffile = "*"
+joblib = "*"
+dask = "*"
+psutil = "*"
+omero-py = "*"
+scikit-fmm = "*"
+numba = "*"
+edt = "*"
+tiler = "*"
+multiprocess = "*"
+bftools = ">=8.0.0,<9"
+
+[pypi-dependencies]
+torch = { version = "==2.9.0+cu130", index = "https://download.pytorch.org/whl/cu130" }
+torchvision = { version = "*", index = "https://download.pytorch.org/whl/cu130" }
+careamics = "==0.1.0"
+cellpose = "*"
+instanseg-torch = "*"
+monai = "*"
+einops = "*"
+timm = "*"
+segment-anything = "*"
+lightning = "*"
+bioio = ">=3.3.0,<4"
+bioio-bioformats = "==1.0.1"
+nd2 = "*"
+ezomero = "*"
+connected-components-3d = "*"
+# THIS LINE tells Pixi to look for pyproject.toml in the current folder
+cellstitch-cuda = { path = ".", editable = true }
+
+[tasks]
+test-import = "python -c 'import cellstitch; print(\"Success!\")'"

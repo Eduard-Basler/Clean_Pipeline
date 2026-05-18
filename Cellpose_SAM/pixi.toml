@@ -1,0 +1,35 @@
+[workspace]
+name = "cellpose_env"
+channels = ["conda-forge", "pytorch", "nvidia"]
+platforms = ["linux-64"]
+
+[dependencies]
+python = "3.11.*"
+pip = "*"
+packaging = "*"
+numpy = ">=1.24,<2.0"
+scipy = "1.11.*"
+[pypi-dependencies]
+cellpose = "*"
+torch = { version = "==2.9.0+cu130", index = "https://download.pytorch.org/whl/cu130" }
+torchvision = { version = "*", index = "https://download.pytorch.org/whl/cu130" }
+segment-anything = "*"
+# Remove numpy and scipy from this list to prevent pip from overwriting conda
+opencv-python-headless = "*"
+pyqtgraph = ">=0.11.0rc0"
+natsort = "*"
+google-cloud-storage = "*"
+tqdm = "*"
+tifffile = "*"
+fastremap = "*"
+roifile = "*"
+pyqt5 = "*"
+dask = "*"
+distributed = "*"
+dask-image = "*"
+pyyaml = "*"
+zarr = "*"
+dask_jobqueue = "*"
+bokeh = "*"
+fill-voids = "*"
+qtpy = "*"

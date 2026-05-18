@@ -1,0 +1,34 @@
+Usage:
+  pixi run python Python_Split.py [flags] <input_file> <output_pattern>
+
+Flags:
+  -series <int>   Extract a specific series/position (1-indexed)
+  -channel <int>  Extract a specific channel (1-indexed)
+  -z <int>        Extract a specific Z-slice (1-indexed)
+  -t <int>        Extract a specific timepoint (1-indexed)
+
+Placeholders for Output Pattern:
+  {name}  Base name of the ND2 file (without extension)
+  %s      Series/Position index (1-based)
+  %c      Channel index (1-based)
+  %z      Z-slice index (1-based)
+  %t      Timepoint index (1-based)
+
+Examples:
+
+  1. Extract a specific channel (Channel 4) across all positions into a channel folder:
+     pixi run python Python_Split.py -channel 4 ~/Pipeline_Final/Input/ND2/77179/20251212_experiment.nd2 ~/Pipeline_Fin>     --> Outputs: .../Channel_4/20251212_experiment_s1_c4.tiff, _s2_c4.tiff, etc.
+     --> Note: Squeezes out channel dimension for clean 3D Z-stack Cellpose compatibility.
+
+  2. Run in the BACKGROUND with NO LOGS (Using spaces in the folder name):
+     nohup pixi run python Python_Split.py -channel 1 ~/Pipeline_Final/Input/ND2/77179/20251212_experiment.nd2 ~/"Pipel>     --> CRITICAL: If your path has spaces, wrap the path in double quotes.
+     --> CRITICAL: Keep the tilde (~) OUTSIDE of the double quotes (~/"Path...") so Linux can expand it properly.
+
+  3. Fully split everything (All positions, channels, and Z-slices as pure 2D frames):
+     pixi run python Python_Split.py ~/Pipeline_Final/Input/ND2/77179/20251212_experiment.nd2 ~/Pipeline_Final/Input/TI>     --> Outputs: 2D images tracking every position, channel, and slice.
+
+Notes:
+  - All inputs and outputs are 1-indexed to match microscope metadata (NIS-Elements) and ImageJ.
+  - Omitted flags loop through the entire range of that dimension.
+  - Omitting both the flag AND the filename placeholder keeps that dimension intact (e.g., keeping a 3D Z-stack instead>  - 1-sized dimensions are automatically dropped (squeezed) to keep arrays clean for Cellpose.
+  - Automatically overwrites existing files if output paths match.

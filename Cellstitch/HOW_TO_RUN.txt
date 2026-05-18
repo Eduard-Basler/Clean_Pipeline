@@ -1,0 +1,27 @@
+# 1. simple_cellstitch.py
+The main script for 3D segmentation and stitching. It runs Cellpose on XY, YZ, and XZ views and assembles them using Optimal Transport.
+
+```bash
+pixi run python simple_cellstitch.py <INPUT_TIFF> <OUTPUT_DIR_OR_FILE> [OPTIONS]
+```
+
+# Options:
+- `--batch_xy`: Batch size for XY plane (Default: 32)
+- `--batch_yz`: Batch size for YZ plane (Default: 32)
+- `--batch_xz`: Batch size for XZ plane (Default: 32)
+
+---
+
+# 2. cut_channels.py
+A utility to extract specific channels (Wall and Nuclei) from a raw 4D stack before running the stitcher.
+
+# Usage:
+```bash
+pixi run python cut_channels.py <INPUT_TIFF> <OUTPUT_TIFF>
+```
+
+# Example:
+```bash
+pixi run python cut_channels.py raw_full.tif stack_cut.tif
+```
+

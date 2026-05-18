@@ -1,0 +1,3 @@
+pixi run omero -s omero.biozentrum.unibas.ch -u basler0004 -w <PASSWORD> download Image:2783171 <OUTPUT_DIR>
+
+pixi run omero logout

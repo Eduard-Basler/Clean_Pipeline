@@ -1,0 +1,16 @@
+[workspace]
+channels = ["conda-forge"]
+name = "Analysis"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "3.11.*"
+numpy = ">=2.4.5,<3"
+pandas = ">=3.0.3,<4"
+tifffile = ">=2026.3.3,<2027"
+scikit-image = ">=0.26.0,<0.27"
+scipy = ">=1.17.1,<2"
+matplotlib = ">=3.10.9,<4"

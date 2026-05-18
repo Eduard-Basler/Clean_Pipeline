@@ -1,0 +1,14 @@
+[workspace]
+name = "u_Segment3D_env"
+channels = ["conda-forge", "nvidia"]
+platforms = ["linux-64"]
+
+[dependencies]
+python = "3.9.*"
+cuda-toolkit = "11.8.*"
+cudnn = "8.*"
+scikit-fmm = "*"
+numpy = "<2.0"
+
+[pypi-dependencies]
+u-segment3d = ">=0.1.4, <0.2"
