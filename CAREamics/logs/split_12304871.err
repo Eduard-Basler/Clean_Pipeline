@@ -1,0 +1,7 @@
+/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/Denoise.py: line 1: import: command not found
+from: too many arguments
+/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/Denoise.py: line 3: import: command not found
+from: too many arguments
+/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/Denoise.py: line 5: $'\r': command not found
+/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/Denoise.py: line 7: syntax error near unexpected token `('
+/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/Denoise.py: line 7: `    parser = argparse.ArgumentParser()'

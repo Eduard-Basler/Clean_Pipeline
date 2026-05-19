@@ -1,0 +1,89 @@
+No working directory provided. Using current working directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics.
+/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python /scicore/home/basler/basler0004/Imaging_Project_sciC ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/torch/__init__.py:1551: UserWarning: Please use the new API settings to control TF32 behavior, such as torch.backends.cudnn.conv.fp32_precision = 'tf32' or torch.backends.cuda.matmul.fp32_precision = 'ieee'. Old settings, e.g, torch.backends.cuda.matmul.allow_tf32 = True, torch.backends.cudnn.allow_tf32 = True, allowTF32CuDNN() and allowTF32CuBLAS() will be deprecated after Pytorch 2.9. Please see https://pytorch.org/docs/main/notes/cuda.html#tensorfloat-32-tf32-on-ampere-and-later-devices (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:80.)
+  return _C._get_float32_matmul_precision()
+You are using a CUDA device ('NVIDIA A100-SXM4-40GB') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:434: The 'predict_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=3` in the `DataLoader` to improve performance.
+Traceback (most recent call last):
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/Denoise.py", line 26, in <module>
+    predictions = careamist.predict(
+                  ^^^^^^^^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/careamics/careamist.py", line 699, in predict
+    predictions = self.trainer.predict(
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/pytorch_lightning/trainer/trainer.py", line 941, in predict
+    return call._call_and_handle_interrupt(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/pytorch_lightning/trainer/call.py", line 49, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/pytorch_lightning/trainer/trainer.py", line 990, in _predict_impl
+    results = self._run(model, ckpt_path=ckpt_path, weights_only=weights_only)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/pytorch_lightning/trainer/trainer.py", line 1079, in _run
+    results = self._run_stage()
+              ^^^^^^^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/pytorch_lightning/trainer/trainer.py", line 1118, in _run_stage
+    return self.predict_loop.run()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/pytorch_lightning/loops/utilities.py", line 179, in _decorator
+    return loop_run(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/pytorch_lightning/loops/prediction_loop.py", line 125, in run
+    self._predict_step(batch, batch_idx, dataloader_idx, dataloader_iter)
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/pytorch_lightning/loops/prediction_loop.py", line 255, in _predict_step
+    predictions = call._call_strategy_hook(trainer, "predict_step", *step_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/pytorch_lightning/trainer/call.py", line 329, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/pytorch_lightning/strategies/strategy.py", line 438, in predict_step
+    return self.lightning_module.predict_step(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/careamics/lightning/lightning_module.py", line 323, in predict_step
+    output = self.model(x)
+             ^^^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/careamics/models/unet.py", line 454, in forward
+    x = self.decoder(*encoder_features)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/careamics/models/unet.py", line 256, in forward
+    x = module(x)
+        ^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/careamics/models/layers.py", line 144, in forward
+    x = self.batch_norm1(x)
+        ^^^^^^^^^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/torch/nn/modules/batchnorm.py", line 193, in forward
+    return F.batch_norm(
+           ^^^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/.pixi/envs/default/lib/python3.11/site-packages/torch/nn/functional.py", line 2813, in batch_norm
+    return torch.batch_norm(
+           ^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 7.00 GiB. GPU 0 has a total capacity of 39.49 GiB of which 3.26 GiB is free. Including non-PyTorch memory, this process has 36.15 GiB memory in use. Of the allocated memory 30.41 GiB is allocated by PyTorch, and 5.26 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
