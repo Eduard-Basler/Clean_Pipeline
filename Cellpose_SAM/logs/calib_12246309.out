@@ -1,0 +1,2 @@
+>>>> !LOGGING OFF BY DEFAULT! To see cellpose progress, set --verbose
+No --verbose => no progress or info printed

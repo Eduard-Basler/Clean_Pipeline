@@ -1,0 +1,3 @@
+usage: Python_Split.py [-h] [-series SERIES] [-channel CHANNEL] [-z Z] [-t T]
+                       input_file output_pattern
+Python_Split.py: error: argument -channel: invalid int value: ''

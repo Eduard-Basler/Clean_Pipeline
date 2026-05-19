@@ -1,0 +1,7 @@
+/var/spool/slurm/job12183981/slurm_script: line 13: cd: /home/basler0004/Final_Final: No such file or directory
+Error:   × failed to fetch libblas-3.9.0-20_linux64_openblas.conda
+  ├─▶ failed to interact with the package cache layer.
+  ╰─▶ HTTP status client error (403 Forbidden) for url (https://
+      conda.anaconda.org/conda-forge/linux-64/libblas-3.9.0-
+      20_linux64_openblas.conda)
+

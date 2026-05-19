@@ -1,0 +1,62 @@
+2026-05-19 02:29:08,457 [INFO] WRITING LOG OUTPUT TO /scicore/home/basler/basler0004/.cellpose/run.log
+2026-05-19 02:29:08,460 [INFO] 
+cellpose version: 	3.1.1.3 
+platform:       	linux 
+python version: 	3.11.15 
+torch version:  	2.4.1+cu121
+2026-05-19 02:29:08,740 [INFO] ** TORCH CUDA version installed and working. **
+2026-05-19 02:29:08,741 [INFO] >>>> using GPU (CUDA)
+2026-05-19 02:29:08,745 [INFO] >>>> running cellpose on 1 images using chan_to_seg GRAY and chan (opt) NONE
+2026-05-19 02:29:08,745 [INFO] ** TORCH CUDA version installed and working. **
+2026-05-19 02:29:08,745 [INFO] >>>> using GPU (CUDA)
+2026-05-19 02:29:08,745 [INFO] >> nuclei << model set to be used
+2026-05-19 02:29:08,830 [INFO] >>>> loading model /scicore/home/basler/basler0004/.cellpose/models/nucleitorch_0
+2026-05-19 02:29:08,972 [INFO] >>>> model diam_mean =  17.000 (ROIs rescaled to this size during training)
+2026-05-19 02:29:08,976 [INFO] >>>> estimating diameter for each image
+2026-05-19 02:29:08,977 [INFO] 0%|          | 0/1 [00:00<?, ?it/s]
+2026-05-19 02:29:09,021 [INFO] reading tiff with 101 planes
+2026-05-19 02:29:14,931 [INFO] channels set to [0, 0]
+2026-05-19 02:29:14,932 [INFO] ~~~ ESTIMATING CELL DIAMETER(S) ~~~
+2026-05-19 02:29:14,932 [WARNING] z_axis not specified, assuming it is dim 0
+2026-05-19 02:29:14,932 [WARNING] if this is actually the channel_axis, use 'model.eval(channel_axis=0, ...)'
+2026-05-19 02:29:14,932 [INFO] multi-stack tiff read in as having 101 planes 1 channels
+2026-05-19 02:29:19,591 [WARNING] normalize_params['norm3D'] is True but do_3D is False and stitch_threshold=0, so setting to False
+2026-05-19 02:29:37,531 [INFO] 
+2026-05-19 02:29:37,531 [INFO] 0%|          | 0/101 [00:00<?, ?it/s]
+2026-05-19 02:29:37,531 [INFO] [A
+2026-05-19 02:30:08,623 [INFO] 
+2026-05-19 02:30:08,623 [INFO] 16%|#5        | 16/101 [00:31<02:45,  1.94s/it]
+2026-05-19 02:30:08,623 [INFO] [A
+2026-05-19 02:30:18,979 [INFO] 
+2026-05-19 02:30:18,979 [INFO] 16%|#5        | 16/101 [00:41<02:45,  1.94s/it]
+2026-05-19 02:30:18,979 [INFO] [A
+2026-05-19 02:30:40,100 [INFO] 
+2026-05-19 02:30:40,100 [INFO] 32%|###1      | 32/101 [01:02<02:15,  1.96s/it]
+2026-05-19 02:30:40,100 [INFO] [A
+2026-05-19 02:30:58,981 [INFO] 
+2026-05-19 02:30:58,982 [INFO] 32%|###1      | 32/101 [01:21<02:15,  1.96s/it]
+2026-05-19 02:30:58,982 [INFO] [A
+2026-05-19 02:31:11,670 [INFO] 
+2026-05-19 02:31:11,672 [INFO] 48%|####7     | 48/101 [01:34<01:44,  1.96s/it]
+2026-05-19 02:31:11,672 [INFO] [A
+2026-05-19 02:31:28,983 [INFO] 
+2026-05-19 02:31:28,984 [INFO] 48%|####7     | 48/101 [01:51<01:44,  1.96s/it]
+2026-05-19 02:31:28,984 [INFO] [A
+2026-05-19 02:31:43,303 [INFO] 
+2026-05-19 02:31:43,303 [INFO] 63%|######3   | 64/101 [02:05<01:12,  1.97s/it]
+2026-05-19 02:31:43,303 [INFO] [A
+2026-05-19 02:31:58,985 [INFO] 
+2026-05-19 02:31:58,986 [INFO] 63%|######3   | 64/101 [02:21<01:12,  1.97s/it]
+2026-05-19 02:31:58,987 [INFO] [A
+2026-05-19 02:32:15,042 [INFO] 
+2026-05-19 02:32:15,042 [INFO] 79%|#######9  | 80/101 [02:37<00:41,  1.97s/it]
+2026-05-19 02:32:15,043 [INFO] [A
+2026-05-19 02:32:28,988 [INFO] 
+2026-05-19 02:32:28,991 [INFO] 79%|#######9  | 80/101 [02:51<00:41,  1.97s/it]
+2026-05-19 02:32:28,991 [INFO] [A
+2026-05-19 02:32:46,771 [INFO] 
+2026-05-19 02:32:46,772 [INFO] 95%|#########5| 96/101 [03:09<00:09,  1.98s/it]
+2026-05-19 02:32:46,772 [INFO] [A
+2026-05-19 02:32:56,742 [INFO] 100%|##########| 101/101 [03:19<00:00,  1.97s/it]
+2026-05-19 02:32:56,760 [INFO] network run in 199.23s
+2026-05-19 02:34:14,430 [INFO] 0%|          | 0/1 [05:05<?, ?it/s]

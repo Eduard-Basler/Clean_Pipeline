@@ -1,0 +1,45 @@
+
+  0%|          | 0/101 [00:00<?, ?it/s][A
+  5%|▍         | 5/101 [00:00<00:02, 37.03it/s][A
+ 10%|▉         | 10/101 [00:00<00:02, 36.46it/s][A
+ 14%|█▍        | 14/101 [00:00<00:03, 25.49it/s][A
+ 17%|█▋        | 17/101 [00:00<00:03, 22.65it/s][A
+ 20%|█▉        | 20/101 [00:00<00:03, 21.50it/s][A
+ 27%|██▋       | 27/101 [00:00<00:02, 32.04it/s][A
+ 31%|███       | 31/101 [00:01<00:02, 32.35it/s][A
+ 35%|███▍      | 35/101 [00:01<00:02, 32.12it/s][A
+ 39%|███▊      | 39/101 [00:01<00:01, 31.88it/s][A
+ 43%|████▎     | 43/101 [00:01<00:01, 31.65it/s][A
+ 47%|████▋     | 47/101 [00:01<00:01, 29.51it/s][A
+ 50%|█████     | 51/101 [00:01<00:01, 28.00it/s][A
+ 53%|█████▎    | 54/101 [00:01<00:01, 27.73it/s][A
+ 56%|█████▋    | 57/101 [00:01<00:01, 27.68it/s][A
+ 59%|█████▉    | 60/101 [00:02<00:01, 26.23it/s][A
+ 62%|██████▏   | 63/101 [00:02<00:01, 25.37it/s][A
+ 65%|██████▌   | 66/101 [00:02<00:01, 25.25it/s][A
+ 68%|██████▊   | 69/101 [00:02<00:01, 24.59it/s][A
+ 71%|███████▏  | 72/101 [00:02<00:01, 25.55it/s][A
+ 75%|███████▌  | 76/101 [00:02<00:00, 26.45it/s][A
+ 80%|████████  | 81/101 [00:02<00:00, 29.87it/s][A
+ 84%|████████▍ | 85/101 [00:02<00:00, 31.06it/s][A
+ 88%|████████▊ | 89/101 [00:03<00:00, 25.16it/s][A
+ 91%|█████████ | 92/101 [00:03<00:00, 21.62it/s][A
+ 94%|█████████▍| 95/101 [00:03<00:00, 19.92it/s][A
+ 97%|█████████▋| 98/101 [00:03<00:00, 18.29it/s][A
+ 99%|█████████▉| 100/101 [00:03<00:00, 17.56it/s][A100%|██████████| 101/101 [00:03<00:00, 25.35it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM_TITAN/.pixi/envs/default/lib/python3.11/site-packages/cellpose/__main__.py", line 277, in <module>
+    main()
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM_TITAN/.pixi/envs/default/lib/python3.11/site-packages/cellpose/__main__.py", line 121, in main
+    _evaluate_cellposemodel_cli(args, logger, image_filter, device, pretrained_model, normalize)
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM_TITAN/.pixi/envs/default/lib/python3.11/site-packages/cellpose/__main__.py", line 224, in _evaluate_cellposemodel_cli
+    out = model.eval(
+          ^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM_TITAN/.pixi/envs/default/lib/python3.11/site-packages/cellpose/models.py", line 262, in eval
+    x = transforms.convert_image(x, channel_axis=channel_axis,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM_TITAN/.pixi/envs/default/lib/python3.11/site-packages/cellpose/transforms.py", line 572, in convert_image
+    raise ValueError("2D image provided, but z_axis is not None. Set z_axis=None to process 2D images of ndim=2 or 3.")
+ValueError: 2D image provided, but z_axis is not None. Set z_axis=None to process 2D images of ndim=2 or 3.

@@ -1,0 +1,16 @@
+2026-05-19 02:14:42,598 [INFO] WRITING LOG OUTPUT TO /scicore/home/basler/basler0004/.cellpose/run.log
+2026-05-19 02:14:42,598 [INFO] 
+cellpose version: 	3.1.1.3 
+platform:       	linux 
+python version: 	3.11.15 
+torch version:  	2.4.1+cu121
+2026-05-19 02:14:42,876 [INFO] ** TORCH CUDA version installed and working. **
+2026-05-19 02:14:42,877 [INFO] >>>> using GPU (CUDA)
+2026-05-19 02:14:42,884 [INFO] >>>> running cellpose on 1 images using chan_to_seg GRAY and chan (opt) NONE
+2026-05-19 02:14:42,884 [INFO] ** TORCH CUDA version installed and working. **
+2026-05-19 02:14:42,884 [INFO] >>>> using GPU (CUDA)
+2026-05-19 02:14:42,884 [INFO] >> nuclei << model set to be used
+2026-05-19 02:14:42,981 [INFO] >>>> loading model /scicore/home/basler/basler0004/.cellpose/models/nucleitorch_0
+2026-05-19 02:14:43,233 [INFO] >>>> model diam_mean =  17.000 (ROIs rescaled to this size during training)
+2026-05-19 02:14:43,234 [INFO] Downloading: "https://www.cellpose.org/models/size_nucleitorch_0.npy" to /scicore/home/basler/basler0004/.cellpose/models/size_nucleitorch_0.npy
+

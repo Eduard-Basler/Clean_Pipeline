@@ -1,0 +1,63 @@
+
+  0%|          | 0/101 [00:00<?, ?it/s][A
+  3%|▎         | 3/101 [00:00<00:03, 24.78it/s][A
+  6%|▌         | 6/101 [00:00<00:04, 20.68it/s][A
+  9%|▉         | 9/101 [00:00<00:04, 19.78it/s][A
+ 12%|█▏        | 12/101 [00:00<00:04, 18.48it/s][A
+ 14%|█▍        | 14/101 [00:00<00:04, 17.49it/s][A
+ 16%|█▌        | 16/101 [00:00<00:04, 17.34it/s][A
+ 18%|█▊        | 18/101 [00:01<00:05, 15.43it/s][A
+ 20%|█▉        | 20/101 [00:01<00:05, 16.07it/s][A
+ 22%|██▏       | 22/101 [00:01<00:04, 16.31it/s][A
+ 24%|██▍       | 24/101 [00:01<00:04, 16.50it/s][A
+ 27%|██▋       | 27/101 [00:01<00:03, 18.62it/s][A
+ 29%|██▊       | 29/101 [00:01<00:03, 18.97it/s][A
+ 32%|███▏      | 32/101 [00:01<00:03, 20.39it/s][A
+ 35%|███▍      | 35/101 [00:01<00:03, 21.51it/s][A
+ 38%|███▊      | 38/101 [00:02<00:03, 20.52it/s][A
+ 41%|████      | 41/101 [00:02<00:03, 19.80it/s][A
+ 44%|████▎     | 44/101 [00:02<00:02, 19.70it/s][A
+ 46%|████▌     | 46/101 [00:02<00:02, 19.18it/s][A
+ 48%|████▊     | 48/101 [00:02<00:03, 17.48it/s][A
+ 50%|████▉     | 50/101 [00:02<00:02, 17.60it/s][A
+ 51%|█████▏    | 52/101 [00:02<00:02, 17.83it/s][A
+ 53%|█████▎    | 54/101 [00:02<00:02, 16.60it/s][A
+ 55%|█████▌    | 56/101 [00:03<00:02, 16.91it/s][A
+ 57%|█████▋    | 58/101 [00:03<00:02, 17.20it/s][A
+ 59%|█████▉    | 60/101 [00:03<00:02, 17.17it/s][A
+ 61%|██████▏   | 62/101 [00:03<00:02, 17.45it/s][A
+ 63%|██████▎   | 64/101 [00:03<00:02, 16.99it/s][A
+ 65%|██████▌   | 66/101 [00:03<00:02, 17.41it/s][A
+ 67%|██████▋   | 68/101 [00:03<00:01, 17.17it/s][A
+ 69%|██████▉   | 70/101 [00:03<00:01, 17.18it/s][A
+ 71%|███████▏  | 72/101 [00:04<00:01, 15.75it/s][A
+ 73%|███████▎  | 74/101 [00:04<00:01, 16.15it/s][A
+ 75%|███████▌  | 76/101 [00:04<00:01, 16.70it/s][A
+ 77%|███████▋  | 78/101 [00:04<00:01, 16.41it/s][A
+ 79%|███████▉  | 80/101 [00:04<00:01, 16.84it/s][A
+ 81%|████████  | 82/101 [00:04<00:01, 16.67it/s][A
+ 83%|████████▎ | 84/101 [00:04<00:01, 16.80it/s][A
+ 85%|████████▌ | 86/101 [00:04<00:00, 17.14it/s][A
+ 87%|████████▋ | 88/101 [00:04<00:00, 17.44it/s][A
+ 89%|████████▉ | 90/101 [00:05<00:00, 16.39it/s][A
+ 91%|█████████ | 92/101 [00:05<00:00, 15.18it/s][A
+ 93%|█████████▎| 94/101 [00:05<00:00, 15.72it/s][A
+ 95%|█████████▌| 96/101 [00:05<00:00, 15.81it/s][A
+ 97%|█████████▋| 98/101 [00:05<00:00, 16.14it/s][A
+ 99%|█████████▉| 100/101 [00:05<00:00, 16.63it/s][A100%|██████████| 101/101 [00:05<00:00, 17.47it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM_TITAN/.pixi/envs/default/lib/python3.11/site-packages/cellpose/__main__.py", line 277, in <module>
+    main()
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM_TITAN/.pixi/envs/default/lib/python3.11/site-packages/cellpose/__main__.py", line 121, in main
+    _evaluate_cellposemodel_cli(args, logger, image_filter, device, pretrained_model, normalize)
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM_TITAN/.pixi/envs/default/lib/python3.11/site-packages/cellpose/__main__.py", line 224, in _evaluate_cellposemodel_cli
+    out = model.eval(
+          ^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM_TITAN/.pixi/envs/default/lib/python3.11/site-packages/cellpose/models.py", line 262, in eval
+    x = transforms.convert_image(x, channel_axis=channel_axis,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM_TITAN/.pixi/envs/default/lib/python3.11/site-packages/cellpose/transforms.py", line 572, in convert_image
+    raise ValueError("2D image provided, but z_axis is not None. Set z_axis=None to process 2D images of ndim=2 or 3.")
+ValueError: 2D image provided, but z_axis is not None. Set z_axis=None to process 2D images of ndim=2 or 3.

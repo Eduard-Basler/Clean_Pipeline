@@ -1,0 +1,38 @@
+#Stitching
+
+pixi run python -m cellpose \
+  --dir /home/basler0004/Final_Final/Input/TIFF/Test \
+  --savedir /home/basler0004/Final_Final/Temp_Cellpose_pred/Test \
+  --use_gpu \
+  --z_axis 0 \
+  --batch_size 64 \
+  --diameter 76.271 \
+  --flow_threshold -3.742 \
+  --cellprob_threshold 0.759 \
+  --min_size 23959 \
+  --stitch_threshold 0.456 \
+  --norm_percentile 1.82 98.53 \
+  --save_tif \
+  --no_npy \
+  --verbose
+
+
+#3D
+
+Setting for ideal true3D
+	pixi run python -m cellpose \
+	  --dir /home/basler0004/Final_Final/Input/TIFF/Test \
+	  --savedir /home/basler0004/Final_Final/Temp_Cellpose_pred/Test \
+	  --use_gpu \
+	  --z_axis 0 \
+	  --do_3D \
+	  --batch_size 32 \
+	  --diameter 109.13 \
+	  --cellprob_threshold -5.404 \
+	  --min_size 28553 \
+	  --anisotropy 2.786 \
+	  --flow3D_smooth 0.69 0.69 0.69 \
+	  --norm_percentile 0.59 97.267 \
+	  --save_tif \
+	  --no_npy
+

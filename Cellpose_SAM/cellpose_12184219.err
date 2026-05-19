@@ -1,0 +1,2 @@
+/var/spool/slurm/job12184219/slurm_script: line 13: cd: /home/basler0004/Final_Final: No such file or directory
+[2026-05-18T17:04:51.497] error: *** JOB 12184219 ON sgi01 CANCELLED AT 2026-05-18T17:04:51 DUE to SIGNAL Terminated ***
