@@ -1,65 +1,0 @@
-
-  0%|          | 0/101 [00:00<?, ?it/s][A
-  3%|▎         | 3/101 [00:00<00:04, 20.01it/s][A
-  6%|▌         | 6/101 [00:00<00:05, 17.76it/s][A
-  8%|▊         | 8/101 [00:00<00:05, 18.37it/s][A
- 10%|▉         | 10/101 [00:00<00:04, 18.54it/s][A
- 12%|█▏        | 12/101 [00:00<00:04, 18.13it/s][A
- 14%|█▍        | 14/101 [00:00<00:04, 17.50it/s][A
- 16%|█▌        | 16/101 [00:00<00:04, 17.77it/s][A
- 18%|█▊        | 18/101 [00:01<00:05, 15.88it/s][A
- 20%|█▉        | 20/101 [00:01<00:04, 16.83it/s][A
- 22%|██▏       | 22/101 [00:01<00:04, 17.39it/s][A
- 24%|██▍       | 24/101 [00:01<00:04, 17.80it/s][A
- 26%|██▌       | 26/101 [00:01<00:04, 17.61it/s][A
- 28%|██▊       | 28/101 [00:01<00:04, 17.43it/s][A
- 30%|██▉       | 30/101 [00:01<00:04, 16.50it/s][A
- 32%|███▏      | 32/101 [00:01<00:04, 15.46it/s][A
- 34%|███▎      | 34/101 [00:02<00:05, 12.70it/s][A
- 36%|███▌      | 36/101 [00:02<00:05, 13.00it/s][A
- 38%|███▊      | 38/101 [00:02<00:04, 14.16it/s][A
- 40%|███▉      | 40/101 [00:02<00:04, 14.99it/s][A
- 42%|████▏     | 42/101 [00:02<00:03, 15.14it/s][A
- 44%|████▎     | 44/101 [00:02<00:03, 14.99it/s][A
- 46%|████▌     | 46/101 [00:02<00:03, 15.22it/s][A
- 48%|████▊     | 48/101 [00:02<00:03, 15.79it/s][A
- 50%|████▉     | 50/101 [00:03<00:03, 16.60it/s][A
- 51%|█████▏    | 52/101 [00:03<00:03, 16.23it/s][A
- 53%|█████▎    | 54/101 [00:03<00:02, 15.85it/s][A
- 55%|█████▌    | 56/101 [00:03<00:02, 16.25it/s][A
- 58%|█████▊    | 59/101 [00:03<00:02, 17.78it/s][A
- 60%|██████    | 61/101 [00:03<00:02, 18.01it/s][A
- 62%|██████▏   | 63/101 [00:03<00:02, 18.18it/s][A
- 64%|██████▍   | 65/101 [00:03<00:01, 18.46it/s][A
- 66%|██████▋   | 67/101 [00:04<00:01, 18.32it/s][A
- 68%|██████▊   | 69/101 [00:04<00:01, 18.60it/s][A
- 70%|███████   | 71/101 [00:04<00:01, 18.62it/s][A
- 72%|███████▏  | 73/101 [00:04<00:01, 18.38it/s][A
- 74%|███████▍  | 75/101 [00:04<00:01, 18.68it/s][A
- 77%|███████▋  | 78/101 [00:04<00:01, 19.74it/s][A
- 79%|███████▉  | 80/101 [00:04<00:01, 19.69it/s][A
- 81%|████████  | 82/101 [00:04<00:01, 18.57it/s][A
- 83%|████████▎ | 84/101 [00:04<00:00, 18.43it/s][A
- 85%|████████▌ | 86/101 [00:05<00:00, 18.19it/s][A
- 87%|████████▋ | 88/101 [00:05<00:00, 18.33it/s][A
- 89%|████████▉ | 90/101 [00:05<00:00, 17.31it/s][A
- 91%|█████████ | 92/101 [00:05<00:00, 17.86it/s][A
- 93%|█████████▎| 94/101 [00:05<00:00, 16.45it/s][A
- 96%|█████████▌| 97/101 [00:05<00:00, 17.89it/s][A
- 98%|█████████▊| 99/101 [00:05<00:00, 18.10it/s][A
-100%|██████████| 101/101 [00:05<00:00, 17.86it/s][A100%|██████████| 101/101 [00:05<00:00, 17.10it/s]
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_3_TITAN/.pixi/envs/default/lib/python3.11/site-packages/cellpose/__main__.py", line 380, in <module>
-    main()
-  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_3_TITAN/.pixi/envs/default/lib/python3.11/site-packages/cellpose/__main__.py", line 216, in main
-    out = model.eval(
-          ^^^^^^^^^^^
-  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_3_TITAN/.pixi/envs/default/lib/python3.11/site-packages/cellpose/models.py", line 184, in eval
-    diams, _ = self.sz.eval(x, channels=channels, channel_axis=channel_axis,
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_3_TITAN/.pixi/envs/default/lib/python3.11/site-packages/cellpose/models.py", line 772, in eval
-    diam_style = self.diam_mean if (diam_style == 0 or
-                                    ^^^^^^^^^^^^^^^
-ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()

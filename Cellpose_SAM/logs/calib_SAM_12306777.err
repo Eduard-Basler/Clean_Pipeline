@@ -1,104 +1,0 @@
-
-  0%|          | 0/101 [00:00<?, ?it/s][A
-  2%|▏         | 2/101 [00:00<00:05, 18.53it/s][A
-  4%|▍         | 4/101 [00:00<00:05, 17.26it/s][A
-  6%|▌         | 6/101 [00:00<00:05, 17.57it/s][A
-  8%|▊         | 8/101 [00:00<00:05, 16.94it/s][A
- 10%|▉         | 10/101 [00:00<00:05, 15.97it/s][A
- 12%|█▏        | 12/101 [00:00<00:05, 15.58it/s][A
- 14%|█▍        | 14/101 [00:00<00:05, 16.29it/s][A
- 16%|█▌        | 16/101 [00:01<00:05, 14.39it/s][A
- 18%|█▊        | 18/101 [00:01<00:05, 13.86it/s][A
- 20%|█▉        | 20/101 [00:01<00:05, 15.22it/s][A
- 22%|██▏       | 22/101 [00:01<00:05, 15.05it/s][A
- 24%|██▍       | 24/101 [00:01<00:05, 15.03it/s][A
- 26%|██▌       | 26/101 [00:01<00:05, 14.87it/s][A
- 28%|██▊       | 28/101 [00:01<00:04, 15.34it/s][A
- 30%|██▉       | 30/101 [00:01<00:04, 15.59it/s][A
- 32%|███▏      | 32/101 [00:02<00:04, 15.17it/s][A
- 34%|███▎      | 34/101 [00:02<00:04, 14.29it/s][A
- 36%|███▌      | 36/101 [00:02<00:04, 14.19it/s][A
- 38%|███▊      | 38/101 [00:02<00:04, 13.95it/s][A
- 40%|███▉      | 40/101 [00:02<00:04, 15.04it/s][A
- 42%|████▏     | 42/101 [00:02<00:04, 13.94it/s][A
- 44%|████▎     | 44/101 [00:02<00:03, 14.27it/s][A
- 46%|████▌     | 46/101 [00:03<00:03, 15.45it/s][A
- 48%|████▊     | 48/101 [00:03<00:03, 15.22it/s][A
- 50%|████▉     | 50/101 [00:03<00:03, 15.94it/s][A
- 51%|█████▏    | 52/101 [00:03<00:03, 15.59it/s][A
- 53%|█████▎    | 54/101 [00:03<00:03, 14.60it/s][A
- 55%|█████▌    | 56/101 [00:03<00:02, 15.44it/s][A
- 57%|█████▋    | 58/101 [00:03<00:02, 15.10it/s][A
- 59%|█████▉    | 60/101 [00:03<00:02, 15.52it/s][A
- 61%|██████▏   | 62/101 [00:04<00:02, 15.36it/s][A
- 63%|██████▎   | 64/101 [00:04<00:02, 14.40it/s][A
- 66%|██████▋   | 67/101 [00:04<00:02, 16.62it/s][A
- 68%|██████▊   | 69/101 [00:04<00:01, 16.53it/s][A
- 70%|███████   | 71/101 [00:04<00:01, 15.82it/s][A
- 72%|███████▏  | 73/101 [00:04<00:01, 16.34it/s][A
- 74%|███████▍  | 75/101 [00:04<00:01, 16.69it/s][A
- 76%|███████▌  | 77/101 [00:04<00:01, 17.15it/s][A
- 78%|███████▊  | 79/101 [00:05<00:01, 16.34it/s][A
- 80%|████████  | 81/101 [00:05<00:01, 16.87it/s][A
- 82%|████████▏ | 83/101 [00:05<00:01, 16.04it/s][A
- 84%|████████▍ | 85/101 [00:05<00:00, 16.26it/s][A
- 86%|████████▌ | 87/101 [00:05<00:00, 16.74it/s][A
- 88%|████████▊ | 89/101 [00:05<00:00, 15.47it/s][A
- 90%|█████████ | 91/101 [00:05<00:00, 15.04it/s][A
- 92%|█████████▏| 93/101 [00:06<00:00, 14.68it/s][A
- 94%|█████████▍| 95/101 [00:06<00:00, 15.50it/s][A
- 96%|█████████▌| 97/101 [00:06<00:00, 16.03it/s][A
- 99%|█████████▉| 100/101 [00:06<00:00, 17.64it/s][A100%|██████████| 101/101 [00:06<00:00, 15.63it/s]
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM/.pixi/envs/default/lib/python3.11/site-packages/cellpose/__main__.py", line 277, in <module>
-    main()
-  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM/.pixi/envs/default/lib/python3.11/site-packages/cellpose/__main__.py", line 121, in main
-    _evaluate_cellposemodel_cli(args, logger, image_filter, device, pretrained_model, normalize)
-  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM/.pixi/envs/default/lib/python3.11/site-packages/cellpose/__main__.py", line 224, in _evaluate_cellposemodel_cli
-    out = model.eval(
-          ^^^^^^^^^^^
-  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM/.pixi/envs/default/lib/python3.11/site-packages/cellpose/models.py", line 301, in eval
-    dP, cellprob, styles = self._run_net(
-                           ^^^^^^^^^^^^^^
-  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM/.pixi/envs/default/lib/python3.11/site-packages/cellpose/models.py", line 385, in _run_net
-    yf, styles = run_net(self.net, x, bsize=bsize, augment=augment,
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM/.pixi/envs/default/lib/python3.11/site-packages/cellpose/core.py", line 230, in run_net
-    ya0, stylea0 = _forward(net, IMGa[bslc])
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM/.pixi/envs/default/lib/python3.11/site-packages/cellpose/core.py", line 158, in _forward
-    y, style = net(X)[:2]
-               ^^^^^^
-  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM/.pixi/envs/default/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM/.pixi/envs/default/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM/.pixi/envs/default/lib/python3.11/site-packages/cellpose/vit_sam.py", line 72, in forward
-    x = blk(x)
-        ^^^^^^
-  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM/.pixi/envs/default/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM/.pixi/envs/default/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM/.pixi/envs/default/lib/python3.11/site-packages/segment_anything/modeling/image_encoder.py", line 174, in forward
-    x = self.attn(x)
-        ^^^^^^^^^^^^
-  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM/.pixi/envs/default/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM/.pixi/envs/default/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM/.pixi/envs/default/lib/python3.11/site-packages/segment_anything/modeling/image_encoder.py", line 234, in forward
-    attn = add_decomposed_rel_pos(attn, q, self.rel_pos_h, self.rel_pos_w, (H, W), (H, W))
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM/.pixi/envs/default/lib/python3.11/site-packages/segment_anything/modeling/image_encoder.py", line 358, in add_decomposed_rel_pos
-    attn.view(B, q_h, q_w, k_h, k_w) + rel_h[:, :, :, :, None] + rel_w[:, :, :, None, :]
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
-torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 31.50 GiB. GPU 0 has a total capacity of 79.25 GiB of which 27.36 GiB is free. Including non-PyTorch memory, this process has 51.77 GiB memory in use. Of the allocated memory 50.16 GiB is allocated by PyTorch, and 1.11 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

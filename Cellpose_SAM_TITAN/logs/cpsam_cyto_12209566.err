@@ -1,50 +1,0 @@
-
-  0%|          | 0/101 [00:00<?, ?it/s][A
-  3%|▎         | 3/101 [00:00<00:04, 21.69it/s][A
-  6%|▌         | 6/101 [00:00<00:04, 20.76it/s][A
-  9%|▉         | 9/101 [00:00<00:04, 19.34it/s][A
- 11%|█         | 11/101 [00:00<00:04, 18.93it/s][A
- 13%|█▎        | 13/101 [00:00<00:05, 17.33it/s][A
- 15%|█▍        | 15/101 [00:00<00:04, 17.62it/s][A
- 18%|█▊        | 18/101 [00:00<00:04, 19.37it/s][A
- 22%|██▏       | 22/101 [00:01<00:03, 22.82it/s][A
- 25%|██▍       | 25/101 [00:01<00:03, 23.93it/s][A
- 28%|██▊       | 28/101 [00:01<00:02, 24.68it/s][A
- 31%|███       | 31/101 [00:01<00:03, 22.36it/s][A
- 34%|███▎      | 34/101 [00:01<00:02, 23.49it/s][A
- 38%|███▊      | 38/101 [00:01<00:02, 25.57it/s][A
- 42%|████▏     | 42/101 [00:01<00:02, 26.58it/s][A
- 45%|████▍     | 45/101 [00:01<00:02, 26.90it/s][A
- 48%|████▊     | 48/101 [00:02<00:02, 25.73it/s][A
- 50%|█████     | 51/101 [00:02<00:02, 24.86it/s][A
- 53%|█████▎    | 54/101 [00:02<00:01, 25.14it/s][A
- 56%|█████▋    | 57/101 [00:02<00:01, 22.79it/s][A
- 59%|█████▉    | 60/101 [00:02<00:01, 24.25it/s][A
- 62%|██████▏   | 63/101 [00:02<00:01, 22.77it/s][A
- 66%|██████▋   | 67/101 [00:02<00:01, 24.87it/s][A
- 69%|██████▉   | 70/101 [00:02<00:01, 25.57it/s][A
- 72%|███████▏  | 73/101 [00:03<00:01, 23.17it/s][A
- 75%|███████▌  | 76/101 [00:03<00:01, 21.62it/s][A
- 79%|███████▉  | 80/101 [00:03<00:00, 23.14it/s][A
- 83%|████████▎ | 84/101 [00:03<00:00, 25.24it/s][A
- 86%|████████▌ | 87/101 [00:03<00:00, 25.44it/s][A
- 89%|████████▉ | 90/101 [00:03<00:00, 24.11it/s][A
- 92%|█████████▏| 93/101 [00:03<00:00, 23.34it/s][A
- 95%|█████████▌| 96/101 [00:04<00:00, 22.91it/s][A
- 98%|█████████▊| 99/101 [00:04<00:00, 22.03it/s][A100%|██████████| 101/101 [00:04<00:00, 23.24it/s]
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM_TITAN/.pixi/envs/default/lib/python3.11/site-packages/cellpose/__main__.py", line 277, in <module>
-    main()
-  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM_TITAN/.pixi/envs/default/lib/python3.11/site-packages/cellpose/__main__.py", line 121, in main
-    _evaluate_cellposemodel_cli(args, logger, image_filter, device, pretrained_model, normalize)
-  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM_TITAN/.pixi/envs/default/lib/python3.11/site-packages/cellpose/__main__.py", line 224, in _evaluate_cellposemodel_cli
-    out = model.eval(
-          ^^^^^^^^^^^
-  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM_TITAN/.pixi/envs/default/lib/python3.11/site-packages/cellpose/models.py", line 262, in eval
-    x = transforms.convert_image(x, channel_axis=channel_axis,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM_TITAN/.pixi/envs/default/lib/python3.11/site-packages/cellpose/transforms.py", line 572, in convert_image
-    raise ValueError("2D image provided, but z_axis is not None. Set z_axis=None to process 2D images of ndim=2 or 3.")
-ValueError: 2D image provided, but z_axis is not None. Set z_axis=None to process 2D images of ndim=2 or 3.
