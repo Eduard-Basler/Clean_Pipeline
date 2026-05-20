@@ -6,8 +6,8 @@
 #SBATCH --gres=gpu:1
 #SBATCH --mem=60G
 #SBATCH --cpus-per-task=4 
-#SBATCH --output=logs/cp_3_NS_%j.out
-#SBATCH --error=logs/cp_3_NS_%j.err
+#SBATCH --output=logs/cp_3_NS/%j.out
+#SBATCH --error=logs/cp_3_NS/%j.err
 
 # 1. Setup and Environment Check
 cd $HOME/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_3

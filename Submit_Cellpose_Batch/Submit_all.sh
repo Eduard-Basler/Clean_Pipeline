@@ -1,81 +1,61 @@
 #!/bin/bash
 
-# Define absolute paths
-BASE_INPUT="$HOME/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input"
-BASE_OUTPUT="$HOME/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output"
-SCRIPT_DIR="$HOME/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch"
+# ==========================================
+# 1. SET YOUR TARGETS HERE
+# ==========================================
+TARGET_SERIES="s1"
+TARGET_STATE="Denoised"
 
-# Move into the script directory so logs save to the right place
-cd "$SCRIPT_DIR" || exit 1
-mkdir -p logs
+# Set to a specific folder name to test, or "*" to run every single folder
+TARGET_EXP="20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006"
 
-# Loop through both variants (TIFF and Denoised)
-for variant in TIFF Denoised; do
-    INPUT_DIR="${BASE_INPUT}/${variant}"
+
+# ==========================================
+# 2. DEFINING TRACKING PATHS
+# ==========================================
+NUM="${TARGET_SERIES#s}"
+INPUT_BASE="$HOME/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Batch_Input"
+OUTPUT_BASE="$HOME/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Batch_Output"
+
+
+# ==========================================
+# 3. THE ACTUAL ENGINE
+# ==========================================
+echo "=== RUNNING SIMPLIFIED LIVE LAUNCH ==="
+
+# Simple loop: expands TARGET_EXP using absolute paths directly
+for EXP_PATH in "$INPUT_BASE"/$TARGET_EXP; do
     
-    if [ -d "$INPUT_DIR" ]; then
-        echo "Processing folder variant: $variant..."
-        
-        # 1. Loop through EVERY individual experiment folder
-        for EXP_FOLDER in "$INPUT_DIR"/*; do
-            [ ! -d "$EXP_FOLDER" ] && continue # Skip files, only process directories
-            
-            # 2. Grab exactly ONE image from Channel_1 and ONE from Channel_4, strictly stripping newlines
-            img_path_c1=$(find "$EXP_FOLDER/Channel_1" -type f -name "*.tif*" 2>/dev/null | head -n 1 | tr -d '\r\n')
-            img_path_c4=$(find "$EXP_FOLDER/Channel_4" -type f -name "*.tif*" 2>/dev/null | head -n 1 | tr -d '\r\n')
-            
-            # 3. Feed these two selected images into your segmentation loop
-            for img_path in "$img_path_c1" "$img_path_c4"; do
-                [ -z "$img_path" ] && continue # Skip if a channel was missing/empty
-                [ ! -f "$img_path" ] && continue # Defensive double-check that the file physically exists
-                
-                # Extract parent channel folder name
-                CHANNEL_DIR=$(basename "$(dirname "$img_path")")
-                
-                # Map Channel_1 to Nuclei and Channel_4 to Cells
-                if [ "$CHANNEL_DIR" = "Channel_1" ]; then
-                    TARGET="NUC"
-                elif [ "$CHANNEL_DIR" = "Channel_4" ]; then
-                    TARGET="Cell"
-                else
-                    continue # Skip other channels
-                fi
-                
-                # Extract just the folder structure after the variant
-                RELATIVE_PATH="${img_path#$INPUT_DIR/}"
-                SUB_DIR_STRUCTURE="$(dirname "$RELATIVE_PATH")"
-                
-                # Loop through both models and methods
-                for model_type in CP3 CPSAM; do
-                    for method in 3d Stitch; do
-                        
-                        SLURM_SCRIPT="${SCRIPT_DIR}/Submit_${model_type}_${TARGET}_${method}.sh"
-                        
-                        if [ -f "$SLURM_SCRIPT" ]; then
-                            
-                            # Build output path to prevent overwriting
-                            OUT_DIR="${BASE_OUTPUT}/${model_type}_${method}/${variant}/${SUB_DIR_STRUCTURE}"
-                            
-                            # Create the directory synchronously here to prevent race conditions
-                            mkdir -p "$OUT_DIR"
-                            
-                            echo "Submitting: $variant | $(basename "$EXP_FOLDER") | $CHANNEL_DIR | ${model_type}_${method}"
-                            
-                            # Launch sbatch and pass args as $1 and $2
-                            sbatch "$SLURM_SCRIPT" "$img_path" "$OUT_DIR"
-                            
-                            # Throttle submissions to protect the SLURM controller
-                            sleep 0.2
-                            
-                        else
-                            echo "Warning: Script not found -> $SLURM_SCRIPT"
-                        fi
-                        
-                    done
-                done
-            done
-        done
-    fi
+    # Extract just the folder name from the absolute path
+    EXPERIMENT=$(basename "$EXP_PATH")
+    
+    echo "Processing Experiment: $EXPERIMENT"
+
+    # ----------------------------------------
+    # NUCLEUS (Channel 1)
+    # ----------------------------------------
+    NUC_FILE=$(eval echo "$INPUT_BASE/$EXPERIMENT/$TARGET_STATE/Channel_1/*_${TARGET_SERIES}_c1.tiff")
+    NUC_OUT="$OUTPUT_BASE/$EXPERIMENT/$TARGET_STATE/Channel_1/Series_$NUM"
+    
+    mkdir -p "$NUC_OUT"
+    sbatch Submit_CP3_Cell_3d.sh "$NUC_FILE" "$NUC_OUT"
+    sbatch Submit_CP3_Cell_Stitch.sh "$NUC_FILE" "$NUC_OUT"
+    sbatch Submit_CPSAM_Cell_3d.sh "$NUC_FILE" "$NUC_OUT"
+    sbatch Submit_CPSAM_Cell_Stitch.sh "$NUC_FILE" "$NUC_OUT"
+
+
+    # ----------------------------------------
+    # ACTIN (Channel 4)
+    # ----------------------------------------
+    ACTIN_FILE=$(eval echo "$INPUT_BASE/$EXPERIMENT/$TARGET_STATE/Channel_4/*_${TARGET_SERIES}_c4.tiff")
+    ACTIN_OUT="$OUTPUT_BASE/$EXPERIMENT/$TARGET_STATE/Channel_4/Series_$NUM"
+    
+    mkdir -p "$ACTIN_OUT"
+    sbatch Submit_CP3_Cell_3d.sh "$ACTIN_FILE" "$ACTIN_OUT"
+    sbatch Submit_CP3_Cell_Stitch.sh "$ACTIN_FILE" "$ACTIN_OUT"
+    sbatch Submit_CPSAM_Cell_3d.sh   "$ACTIN_FILE" "$ACTIN_OUT"
+    sbatch Submit_CPSAM_Cell_Stitch.sh   "$ACTIN_FILE" "$ACTIN_OUT"
+
 done
 
-echo "All representative test jobs successfully submitted!"
+echo "=== SUBMISSION COMPLETE ==="

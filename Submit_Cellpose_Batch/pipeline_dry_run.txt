@@ -1,0 +1,292 @@
+=== CELLPOSE PIPELINE DRY RUN LOG ===
+Generated on: Wed May 20 14:33:55 CEST 2026
+======================================
+------------------------------------------------
+VARIANT:     Denoised
+EXPERIMENT:  20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006
+CHANNEL:     Channel_1 (Target: NUC)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CP3_NUC_3d.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/Denoised/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_1/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c1.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CP3_3d/Denoised/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_1"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     Denoised
+EXPERIMENT:  20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006
+CHANNEL:     Channel_1 (Target: NUC)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CP3_NUC_Stitch.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/Denoised/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_1/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c1.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CP3_Stitch/Denoised/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_1"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     Denoised
+EXPERIMENT:  20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006
+CHANNEL:     Channel_1 (Target: NUC)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CPSAM_NUC_3d.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/Denoised/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_1/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c1.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CPSAM_3d/Denoised/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_1"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     Denoised
+EXPERIMENT:  20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006
+CHANNEL:     Channel_1 (Target: NUC)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CPSAM_NUC_Stitch.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/Denoised/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_1/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c1.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CPSAM_Stitch/Denoised/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_1"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     Denoised
+EXPERIMENT:  20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006
+CHANNEL:     Channel_4 (Target: Cell)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CP3_Cell_3d.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/Denoised/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_4/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s2_c4.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CP3_3d/Denoised/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_4"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     Denoised
+EXPERIMENT:  20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006
+CHANNEL:     Channel_4 (Target: Cell)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CP3_Cell_Stitch.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/Denoised/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_4/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s2_c4.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CP3_Stitch/Denoised/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_4"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     Denoised
+EXPERIMENT:  20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006
+CHANNEL:     Channel_4 (Target: Cell)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CPSAM_Cell_3d.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/Denoised/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_4/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s2_c4.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CPSAM_3d/Denoised/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_4"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     Denoised
+EXPERIMENT:  20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006
+CHANNEL:     Channel_4 (Target: Cell)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CPSAM_Cell_Stitch.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/Denoised/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_4/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s2_c4.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CPSAM_Stitch/Denoised/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_4"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     Denoised
+EXPERIMENT:  20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002
+CHANNEL:     Channel_1 (Target: NUC)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CP3_NUC_3d.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/Denoised/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_1/CLEAN_20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002_s3_c1.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CP3_3d/Denoised/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_1"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     Denoised
+EXPERIMENT:  20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002
+CHANNEL:     Channel_1 (Target: NUC)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CP3_NUC_Stitch.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/Denoised/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_1/CLEAN_20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002_s3_c1.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CP3_Stitch/Denoised/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_1"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     Denoised
+EXPERIMENT:  20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002
+CHANNEL:     Channel_1 (Target: NUC)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CPSAM_NUC_3d.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/Denoised/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_1/CLEAN_20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002_s3_c1.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CPSAM_3d/Denoised/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_1"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     Denoised
+EXPERIMENT:  20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002
+CHANNEL:     Channel_1 (Target: NUC)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CPSAM_NUC_Stitch.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/Denoised/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_1/CLEAN_20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002_s3_c1.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CPSAM_Stitch/Denoised/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_1"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     Denoised
+EXPERIMENT:  20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002
+CHANNEL:     Channel_4 (Target: Cell)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CP3_Cell_3d.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/Denoised/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_4/CLEAN_20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002_s4_c4.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CP3_3d/Denoised/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_4"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     Denoised
+EXPERIMENT:  20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002
+CHANNEL:     Channel_4 (Target: Cell)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CP3_Cell_Stitch.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/Denoised/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_4/CLEAN_20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002_s4_c4.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CP3_Stitch/Denoised/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_4"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     Denoised
+EXPERIMENT:  20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002
+CHANNEL:     Channel_4 (Target: Cell)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CPSAM_Cell_3d.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/Denoised/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_4/CLEAN_20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002_s4_c4.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CPSAM_3d/Denoised/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_4"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     Denoised
+EXPERIMENT:  20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002
+CHANNEL:     Channel_4 (Target: Cell)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CPSAM_Cell_Stitch.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/Denoised/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_4/CLEAN_20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002_s4_c4.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CPSAM_Stitch/Denoised/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_4"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     Denoised
+EXPERIMENT:  20260210_tw_sATA1521_3hPI_rep2_60xOIL_
+CHANNEL:     Channel_1 (Target: NUC)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CP3_NUC_3d.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/Denoised/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_1/CLEAN_20260210_tw_sATA1521_3hPI_rep2_60xOIL__s5_c1.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CP3_3d/Denoised/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_1"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     Denoised
+EXPERIMENT:  20260210_tw_sATA1521_3hPI_rep2_60xOIL_
+CHANNEL:     Channel_1 (Target: NUC)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CP3_NUC_Stitch.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/Denoised/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_1/CLEAN_20260210_tw_sATA1521_3hPI_rep2_60xOIL__s5_c1.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CP3_Stitch/Denoised/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_1"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     Denoised
+EXPERIMENT:  20260210_tw_sATA1521_3hPI_rep2_60xOIL_
+CHANNEL:     Channel_1 (Target: NUC)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CPSAM_NUC_3d.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/Denoised/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_1/CLEAN_20260210_tw_sATA1521_3hPI_rep2_60xOIL__s5_c1.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CPSAM_3d/Denoised/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_1"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     Denoised
+EXPERIMENT:  20260210_tw_sATA1521_3hPI_rep2_60xOIL_
+CHANNEL:     Channel_1 (Target: NUC)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CPSAM_NUC_Stitch.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/Denoised/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_1/CLEAN_20260210_tw_sATA1521_3hPI_rep2_60xOIL__s5_c1.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CPSAM_Stitch/Denoised/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_1"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     Denoised
+EXPERIMENT:  20260210_tw_sATA1521_3hPI_rep2_60xOIL_
+CHANNEL:     Channel_4 (Target: Cell)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CP3_Cell_3d.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/Denoised/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_4/CLEAN_20260210_tw_sATA1521_3hPI_rep2_60xOIL__s5_c4.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CP3_3d/Denoised/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_4"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     Denoised
+EXPERIMENT:  20260210_tw_sATA1521_3hPI_rep2_60xOIL_
+CHANNEL:     Channel_4 (Target: Cell)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CP3_Cell_Stitch.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/Denoised/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_4/CLEAN_20260210_tw_sATA1521_3hPI_rep2_60xOIL__s5_c4.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CP3_Stitch/Denoised/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_4"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     Denoised
+EXPERIMENT:  20260210_tw_sATA1521_3hPI_rep2_60xOIL_
+CHANNEL:     Channel_4 (Target: Cell)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CPSAM_Cell_3d.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/Denoised/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_4/CLEAN_20260210_tw_sATA1521_3hPI_rep2_60xOIL__s5_c4.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CPSAM_3d/Denoised/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_4"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     Denoised
+EXPERIMENT:  20260210_tw_sATA1521_3hPI_rep2_60xOIL_
+CHANNEL:     Channel_4 (Target: Cell)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CPSAM_Cell_Stitch.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/Denoised/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_4/CLEAN_20260210_tw_sATA1521_3hPI_rep2_60xOIL__s5_c4.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CPSAM_Stitch/Denoised/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_4"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     TIFF
+EXPERIMENT:  20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006
+CHANNEL:     Channel_1 (Target: NUC)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CP3_NUC_3d.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_1/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s2_c1.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CP3_3d/TIFF/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_1"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     TIFF
+EXPERIMENT:  20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006
+CHANNEL:     Channel_1 (Target: NUC)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CP3_NUC_Stitch.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_1/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s2_c1.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CP3_Stitch/TIFF/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_1"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     TIFF
+EXPERIMENT:  20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006
+CHANNEL:     Channel_1 (Target: NUC)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CPSAM_NUC_3d.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_1/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s2_c1.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CPSAM_3d/TIFF/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_1"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     TIFF
+EXPERIMENT:  20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006
+CHANNEL:     Channel_1 (Target: NUC)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CPSAM_NUC_Stitch.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_1/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s2_c1.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CPSAM_Stitch/TIFF/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_1"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     TIFF
+EXPERIMENT:  20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006
+CHANNEL:     Channel_4 (Target: Cell)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CP3_Cell_3d.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_4/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s2_c4.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CP3_3d/TIFF/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_4"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     TIFF
+EXPERIMENT:  20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006
+CHANNEL:     Channel_4 (Target: Cell)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CP3_Cell_Stitch.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_4/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s2_c4.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CP3_Stitch/TIFF/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_4"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     TIFF
+EXPERIMENT:  20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006
+CHANNEL:     Channel_4 (Target: Cell)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CPSAM_Cell_3d.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_4/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s2_c4.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CPSAM_3d/TIFF/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_4"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     TIFF
+EXPERIMENT:  20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006
+CHANNEL:     Channel_4 (Target: Cell)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CPSAM_Cell_Stitch.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_4/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s2_c4.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CPSAM_Stitch/TIFF/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_4"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     TIFF
+EXPERIMENT:  20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002
+CHANNEL:     Channel_1 (Target: NUC)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CP3_NUC_3d.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_1/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002_s1_c1.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CP3_3d/TIFF/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_1"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     TIFF
+EXPERIMENT:  20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002
+CHANNEL:     Channel_1 (Target: NUC)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CP3_NUC_Stitch.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_1/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002_s1_c1.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CP3_Stitch/TIFF/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_1"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     TIFF
+EXPERIMENT:  20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002
+CHANNEL:     Channel_1 (Target: NUC)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CPSAM_NUC_3d.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_1/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002_s1_c1.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CPSAM_3d/TIFF/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_1"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     TIFF
+EXPERIMENT:  20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002
+CHANNEL:     Channel_1 (Target: NUC)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CPSAM_NUC_Stitch.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_1/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002_s1_c1.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CPSAM_Stitch/TIFF/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_1"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     TIFF
+EXPERIMENT:  20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002
+CHANNEL:     Channel_4 (Target: Cell)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CP3_Cell_3d.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_4/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002_s4_c4.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CP3_3d/TIFF/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_4"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     TIFF
+EXPERIMENT:  20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002
+CHANNEL:     Channel_4 (Target: Cell)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CP3_Cell_Stitch.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_4/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002_s4_c4.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CP3_Stitch/TIFF/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_4"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     TIFF
+EXPERIMENT:  20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002
+CHANNEL:     Channel_4 (Target: Cell)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CPSAM_Cell_3d.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_4/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002_s4_c4.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CPSAM_3d/TIFF/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_4"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     TIFF
+EXPERIMENT:  20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002
+CHANNEL:     Channel_4 (Target: Cell)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CPSAM_Cell_Stitch.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_4/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002_s4_c4.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CPSAM_Stitch/TIFF/20251222_transwell_sATA2131_3hPI_3e6cfu_60xOIL_rep1_002/Channel_4"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     TIFF
+EXPERIMENT:  20260210_tw_sATA1521_3hPI_rep2_60xOIL_
+CHANNEL:     Channel_1 (Target: NUC)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CP3_NUC_3d.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_1/20260210_tw_sATA1521_3hPI_rep2_60xOIL__s1_c1.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CP3_3d/TIFF/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_1"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     TIFF
+EXPERIMENT:  20260210_tw_sATA1521_3hPI_rep2_60xOIL_
+CHANNEL:     Channel_1 (Target: NUC)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CP3_NUC_Stitch.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_1/20260210_tw_sATA1521_3hPI_rep2_60xOIL__s1_c1.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CP3_Stitch/TIFF/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_1"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     TIFF
+EXPERIMENT:  20260210_tw_sATA1521_3hPI_rep2_60xOIL_
+CHANNEL:     Channel_1 (Target: NUC)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CPSAM_NUC_3d.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_1/20260210_tw_sATA1521_3hPI_rep2_60xOIL__s1_c1.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CPSAM_3d/TIFF/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_1"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     TIFF
+EXPERIMENT:  20260210_tw_sATA1521_3hPI_rep2_60xOIL_
+CHANNEL:     Channel_1 (Target: NUC)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CPSAM_NUC_Stitch.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_1/20260210_tw_sATA1521_3hPI_rep2_60xOIL__s1_c1.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CPSAM_Stitch/TIFF/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_1"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     TIFF
+EXPERIMENT:  20260210_tw_sATA1521_3hPI_rep2_60xOIL_
+CHANNEL:     Channel_4 (Target: Cell)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CP3_Cell_3d.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_4/20260210_tw_sATA1521_3hPI_rep2_60xOIL__s3_c4.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CP3_3d/TIFF/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_4"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     TIFF
+EXPERIMENT:  20260210_tw_sATA1521_3hPI_rep2_60xOIL_
+CHANNEL:     Channel_4 (Target: Cell)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CP3_Cell_Stitch.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_4/20260210_tw_sATA1521_3hPI_rep2_60xOIL__s3_c4.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CP3_Stitch/TIFF/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_4"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     TIFF
+EXPERIMENT:  20260210_tw_sATA1521_3hPI_rep2_60xOIL_
+CHANNEL:     Channel_4 (Target: Cell)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CPSAM_Cell_3d.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_4/20260210_tw_sATA1521_3hPI_rep2_60xOIL__s3_c4.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CPSAM_3d/TIFF/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_4"
+SLURM TEMPLATE STATUS: FOUND
+------------------------------------------------
+VARIANT:     TIFF
+EXPERIMENT:  20260210_tw_sATA1521_3hPI_rep2_60xOIL_
+CHANNEL:     Channel_4 (Target: Cell)
+COMMAND:     sbatch "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Submit_Cellpose_Batch/Submit_CPSAM_Cell_Stitch.sh" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_4/20260210_tw_sATA1521_3hPI_rep2_60xOIL__s3_c4.tiff" "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Output/CPSAM_Stitch/TIFF/20260210_tw_sATA1521_3hPI_rep2_60xOIL_/Channel_4"
+SLURM TEMPLATE STATUS: FOUND
+======================================

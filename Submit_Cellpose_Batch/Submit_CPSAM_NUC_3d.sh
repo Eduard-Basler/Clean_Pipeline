@@ -4,10 +4,10 @@
 #SBATCH --qos=a100-30min
 #SBATCH --time=00:30:00
 #SBATCH --gres=gpu:1
-#SBATCH --mem=60G
+#SBATCH --mem=120G
 #SBATCH --cpus-per-task=4 
-#SBATCH --output=logs/cp_SAM_N3_%j.out
-#SBATCH --error=logs/cp_SAM_N3_%j.err
+#SBATCH --output=logs/cp_SAM_N3/%j.out
+#SBATCH --error=logs/cp_SAM_N3/%j.err
 
 # 1. Setup and Environment Check
 cd $HOME/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_SAM
