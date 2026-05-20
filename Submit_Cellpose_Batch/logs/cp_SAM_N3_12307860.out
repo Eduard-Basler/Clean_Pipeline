@@ -1,0 +1,7 @@
+CPSAM NUC 3D
+2026-05-20 04:32:36,695 [INFO] WRITING LOG OUTPUT TO /scicore/home/basler/basler0004/.cellpose/run.log
+2026-05-20 04:32:36,695 [INFO] 
+cellpose version: 	4.1.1 
+platform:       	linux 
+python version: 	3.11.15 
+torch version:  	2.9.0+cu130

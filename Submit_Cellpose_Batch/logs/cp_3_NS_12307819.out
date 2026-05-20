@@ -1,0 +1,10 @@
+CP3 Nuc Stitch
+2026-05-20 04:31:15,810 [INFO] WRITING LOG OUTPUT TO /scicore/home/basler/basler0004/.cellpose/run.log
+2026-05-20 04:31:15,810 [INFO] 
+cellpose version: 	3.1.1.3 
+platform:       	linux 
+python version: 	3.11.15 
+torch version:  	2.9.0+cu130
+2026-05-20 04:31:16,366 [INFO] ** TORCH CUDA version installed and working. **
+2026-05-20 04:31:16,366 [INFO] >>>> using GPU (CUDA)
+2026-05-20 04:31:16,367 [WARNING] pretrained model has incorrect path, using cyto3

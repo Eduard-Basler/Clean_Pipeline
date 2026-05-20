@@ -1,0 +1,19 @@
+2026-05-20 00:49:17,683 [INFO] WRITING LOG OUTPUT TO /scicore/home/basler/basler0004/.cellpose/run.log
+2026-05-20 00:49:17,683 [INFO] 
+cellpose version: 	4.1.1 
+platform:       	linux 
+python version: 	3.11.15 
+torch version:  	2.9.0+cu130
+2026-05-20 00:49:18,417 [INFO] ** TORCH CUDA version installed and working. **
+2026-05-20 00:49:18,418 [INFO] >>>> using GPU (CUDA)
+2026-05-20 00:49:18,418 [WARNING] the '--diam_mean' flag is deprecated in v4.0.1+ and no longer used
+2026-05-20 00:49:18,418 [INFO] >>>> running cellpose on 1 images using all channels
+2026-05-20 00:49:20,188 [INFO] >>>> loading model /scicore/home/basler/basler0004/.cellpose/models/cpsam
+2026-05-20 00:49:20,903 [INFO] 0%|          | 0/1 [00:00<?, ?it/s]
+2026-05-20 00:49:20,903 [INFO] loading image as 3D zstack
+2026-05-20 00:49:20,905 [INFO] reading tiff with 101 planes
+2026-05-20 00:49:33,782 [INFO] 
+2026-05-20 00:49:33,783 [INFO] 0%|          | 0/5 [00:00<?, ?it/s]
+2026-05-20 00:49:33,783 [INFO] [A
+2026-05-20 00:49:34,655 [INFO] 0%|          | 0/5 [00:00<?, ?it/s]
+2026-05-20 00:49:34,655 [INFO] 0%|          | 0/1 [00:13<?, ?it/s]

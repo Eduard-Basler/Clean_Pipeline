@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_3/.pixi/envs/default/lib/python3.11/site-packages/cellpose/__main__.py", line 380, in <module>
+    main()
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_3/.pixi/envs/default/lib/python3.11/site-packages/cellpose/__main__.py", line 148, in main
+    raise ValueError(f"ERROR: no file found at {args.image_path}")
+ValueError: ERROR: no file found at /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_4/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s2_c4.tiff
+/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Channel_4/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s5_c4.tiff

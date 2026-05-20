@@ -1,0 +1,54 @@
+CP3 Cell Stitch
+2026-05-20 04:38:15,290 [INFO] WRITING LOG OUTPUT TO /scicore/home/basler/basler0004/.cellpose/run.log
+2026-05-20 04:38:15,290 [INFO] 
+cellpose version: 	3.1.1.3 
+platform:       	linux 
+python version: 	3.11.15 
+torch version:  	2.9.0+cu130
+2026-05-20 04:38:15,729 [INFO] ** TORCH CUDA version installed and working. **
+2026-05-20 04:38:15,729 [INFO] >>>> using GPU (CUDA)
+2026-05-20 04:38:15,730 [WARNING] pretrained model has incorrect path, using cyto3
+2026-05-20 04:38:15,739 [INFO] >>>> running cellpose on 1 images using chan_to_seg GRAY and chan (opt) NONE
+2026-05-20 04:38:15,739 [INFO] ** TORCH CUDA version installed and working. **
+2026-05-20 04:38:15,739 [INFO] >>>> using GPU (CUDA)
+2026-05-20 04:38:15,739 [INFO] >> cyto3 << model set to be used
+2026-05-20 04:38:15,842 [INFO] >>>> loading model /scicore/home/basler/basler0004/.cellpose/models/cyto3
+2026-05-20 04:38:16,011 [INFO] >>>> model diam_mean =  30.000 (ROIs rescaled to this size during training)
+2026-05-20 04:38:16,012 [INFO] >>>> using diameter 69.970 for all images
+2026-05-20 04:38:16,028 [INFO] 0%|          | 0/1 [00:00<?, ?it/s]
+2026-05-20 04:38:16,102 [INFO] reading tiff with 101 planes
+2026-05-20 04:38:22,368 [INFO] channels set to [0, 0]
+2026-05-20 04:38:22,369 [INFO] ~~~ FINDING MASKS ~~~
+2026-05-20 04:38:22,369 [WARNING] z_axis not specified, assuming it is dim 0
+2026-05-20 04:38:22,369 [WARNING] if this is actually the channel_axis, use 'model.eval(channel_axis=0, ...)'
+2026-05-20 04:38:22,369 [INFO] multi-stack tiff read in as having 101 planes 1 channels
+2026-05-20 04:38:27,815 [INFO] 
+2026-05-20 04:38:27,815 [INFO] 0%|          | 0/6 [00:00<?, ?it/s]
+2026-05-20 04:38:27,815 [INFO] [A
+2026-05-20 04:38:43,371 [INFO] 100%|##########| 6/6 [00:15<00:00,  2.59s/it]
+2026-05-20 04:38:48,300 [INFO] network run in 20.49s
+2026-05-20 04:38:48,300 [INFO] 
+2026-05-20 04:38:48,300 [INFO] 0%|          | 0/101 [00:00<?, ?it/s]
+2026-05-20 04:38:48,301 [INFO] [A
+2026-05-20 04:39:18,304 [INFO] 
+2026-05-20 04:39:18,304 [INFO] 25%|##4       | 25/101 [00:30<01:31,  1.20s/it]
+2026-05-20 04:39:18,304 [INFO] [A
+2026-05-20 04:39:36,030 [INFO] 
+2026-05-20 04:39:36,031 [INFO] 25%|##4       | 25/101 [00:47<01:31,  1.20s/it]
+2026-05-20 04:39:36,031 [INFO] [A
+2026-05-20 04:39:48,721 [INFO] 
+2026-05-20 04:39:48,722 [INFO] 50%|#####     | 51/101 [01:00<00:59,  1.18s/it]
+2026-05-20 04:39:48,722 [INFO] [A
+2026-05-20 04:40:06,031 [INFO] 
+2026-05-20 04:40:06,032 [INFO] 50%|#####     | 51/101 [01:17<00:59,  1.18s/it]
+2026-05-20 04:40:06,032 [INFO] [A
+2026-05-20 04:40:18,945 [INFO] 
+2026-05-20 04:40:18,945 [INFO] 86%|########6 | 87/101 [01:30<00:13,  1.00it/s]
+2026-05-20 04:40:18,945 [INFO] [A
+2026-05-20 04:40:24,749 [INFO] 100%|##########| 101/101 [01:36<00:00,  1.05it/s]
+2026-05-20 04:40:24,750 [INFO] stitching 101 planes using stitch_threshold=0.500 to make 3D masks
+2026-05-20 04:41:19,973 [INFO] masks created in 151.67s
+2026-05-20 04:42:15,637 [INFO] >>>> TOTAL TIME 233.27 sec
+2026-05-20 04:42:19,345 [INFO] 100%|##########| 1/1 [04:03<00:00, 243.31s/it]
+2026-05-20 04:42:19,346 [INFO] 100%|##########| 1/1 [04:03<00:00, 243.31s/it]
+2026-05-20 04:42:19,346 [INFO] >>>> completed in 243.616 sec

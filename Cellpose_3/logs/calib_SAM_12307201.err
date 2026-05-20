@@ -1,0 +1,20 @@
+
+  0%|          | 0/101 [00:00<?, ?it/s][A
+ 15%|█▍        | 15/101 [00:00<00:00, 147.03it/s][A
+ 31%|███       | 31/101 [00:00<00:00, 148.84it/s][A
+ 47%|████▋     | 47/101 [00:00<00:00, 149.74it/s][A
+ 61%|██████▏   | 62/101 [00:00<00:00, 149.65it/s][A
+ 76%|███████▌  | 77/101 [00:00<00:00, 149.75it/s][A
+ 92%|█████████▏| 93/101 [00:00<00:00, 150.12it/s][A100%|██████████| 101/101 [00:00<00:00, 149.76it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_3/.pixi/envs/default/lib/python3.11/site-packages/cellpose/__main__.py", line 380, in <module>
+    main()
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_3/.pixi/envs/default/lib/python3.11/site-packages/cellpose/__main__.py", line 257, in main
+    io.save_masks(image, masks, flows, image_name,
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_3/.pixi/envs/default/lib/python3.11/site-packages/cellpose/io.py", line 672, in save_masks
+    check_dir(savedir)
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Cellpose_3/.pixi/envs/default/lib/python3.11/site-packages/cellpose/io.py", line 81, in check_dir
+    os.mkdir(path)
+FileNotFoundError: [Errno 2] No such file or directory: ''

@@ -1,0 +1,44 @@
+CP3 Cell 3D
+2026-05-20 04:38:16,815 [INFO] WRITING LOG OUTPUT TO /scicore/home/basler/basler0004/.cellpose/run.log
+2026-05-20 04:38:16,815 [INFO] 
+cellpose version: 	3.1.1.3 
+platform:       	linux 
+python version: 	3.11.15 
+torch version:  	2.9.0+cu130
+2026-05-20 04:38:17,331 [INFO] ** TORCH CUDA version installed and working. **
+2026-05-20 04:38:17,332 [INFO] >>>> using GPU (CUDA)
+2026-05-20 04:38:17,332 [WARNING] pretrained model has incorrect path, using cyto3
+2026-05-20 04:38:17,337 [INFO] >>>> running cellpose on 1 images using chan_to_seg GRAY and chan (opt) NONE
+2026-05-20 04:38:17,337 [INFO] >> cyto3 << model set to be used
+2026-05-20 04:38:17,417 [INFO] >>>> loading model /scicore/home/basler/basler0004/.cellpose/models/cyto3
+2026-05-20 04:38:17,488 [INFO] >>>> model diam_mean =  30.000 (ROIs rescaled to this size during training)
+2026-05-20 04:38:17,488 [INFO] >>>> using diameter 69.970 for all images
+2026-05-20 04:38:17,489 [INFO] 0%|          | 0/1 [00:00<?, ?it/s]
+2026-05-20 04:38:17,491 [INFO] reading tiff with 101 planes
+2026-05-20 04:38:22,368 [WARNING] z_axis not specified, assuming it is dim 0
+2026-05-20 04:38:22,369 [WARNING] if this is actually the channel_axis, use 'model.eval(channel_axis=0, ...)'
+2026-05-20 04:38:22,369 [INFO] multi-stack tiff read in as having 101 planes 1 channels
+2026-05-20 04:38:27,804 [INFO] resizing 3D image with rescale=0.43 and anisotropy=2.43
+2026-05-20 04:38:28,970 [INFO] running YX: 105 planes of size (1166, 1166)
+2026-05-20 04:38:28,970 [INFO] 
+2026-05-20 04:38:28,971 [INFO] 0%|          | 0/6 [00:00<?, ?it/s]
+2026-05-20 04:38:28,971 [INFO] [A
+2026-05-20 04:38:43,813 [INFO] 100%|##########| 6/6 [00:14<00:00,  2.47s/it]
+2026-05-20 04:38:45,394 [INFO] running ZY: 1166 planes of size (105, 1166)
+2026-05-20 04:38:45,395 [INFO] 
+2026-05-20 04:38:45,395 [INFO] 0%|          | 0/9 [00:00<?, ?it/s]
+2026-05-20 04:38:45,395 [INFO] [A
+2026-05-20 04:38:56,849 [INFO] 100%|##########| 9/9 [00:11<00:00,  1.27s/it]
+2026-05-20 04:38:57,671 [INFO] running ZX: 1166 planes of size (105, 1166)
+2026-05-20 04:38:57,671 [INFO] 
+2026-05-20 04:38:57,671 [INFO] 0%|          | 0/9 [00:00<?, ?it/s]
+2026-05-20 04:38:57,671 [INFO] [A
+2026-05-20 04:39:15,280 [INFO] 100%|##########| 9/9 [00:17<00:00,  1.96s/it]
+2026-05-20 04:39:21,107 [INFO] resizing 3D flows and cellprob to original image size
+2026-05-20 04:39:31,083 [INFO] network run in 63.28s
+2026-05-20 04:39:31,140 [INFO] smoothing flows with sigma=1.74
+2026-05-20 04:42:52,033 [WARNING] more than 65535 masks in image, masks returned as np.uint32
+2026-05-20 04:43:25,174 [INFO] masks created in 160.48s
+2026-05-20 04:44:14,883 [INFO] 100%|##########| 1/1 [05:57<00:00, 357.39s/it]
+2026-05-20 04:44:14,883 [INFO] 100%|##########| 1/1 [05:57<00:00, 357.39s/it]
+2026-05-20 04:44:14,883 [INFO] >>>> completed in 357.551 sec

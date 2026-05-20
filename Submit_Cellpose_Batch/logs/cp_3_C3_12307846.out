@@ -1,0 +1,10 @@
+CP3 Cell 3D
+2026-05-20 04:32:17,366 [INFO] WRITING LOG OUTPUT TO /scicore/home/basler/basler0004/.cellpose/run.log
+2026-05-20 04:32:17,366 [INFO] 
+cellpose version: 	3.1.1.3 
+platform:       	linux 
+python version: 	3.11.15 
+torch version:  	2.9.0+cu130
+2026-05-20 04:32:17,655 [INFO] ** TORCH CUDA version installed and working. **
+2026-05-20 04:32:17,660 [INFO] >>>> using GPU (CUDA)
+2026-05-20 04:32:17,663 [WARNING] pretrained model has incorrect path, using cyto3

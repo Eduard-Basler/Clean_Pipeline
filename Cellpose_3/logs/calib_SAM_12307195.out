@@ -1,0 +1,34 @@
+2026-05-20 02:07:58,486 [INFO] WRITING LOG OUTPUT TO /scicore/home/basler/basler0004/.cellpose/run.log
+2026-05-20 02:07:58,486 [INFO] 
+cellpose version: 	3.1.1.3 
+platform:       	linux 
+python version: 	3.11.15 
+torch version:  	2.9.0+cu130
+2026-05-20 02:07:58,977 [INFO] ** TORCH CUDA version installed and working. **
+2026-05-20 02:07:58,977 [INFO] >>>> using GPU (CUDA)
+2026-05-20 02:07:58,977 [INFO] >>>> running cellpose on 1 images using chan_to_seg GRAY and chan (opt) NONE
+2026-05-20 02:07:58,977 [INFO] >> cyto2 << model set to be used
+2026-05-20 02:07:59,034 [INFO] >>>> loading model /scicore/home/basler/basler0004/.cellpose/models/cyto2torch_0
+2026-05-20 02:07:59,154 [INFO] >>>> model diam_mean =  30.000 (ROIs rescaled to this size during training)
+2026-05-20 02:07:59,154 [INFO] >>>> loading ortho model /scicore/home/basler/basler0004/.cellpose/models/cyto2torch_0
+2026-05-20 02:07:59,320 [INFO] >>>> using diameter 69.970 for all images
+2026-05-20 02:07:59,322 [INFO] 0%|          | 0/1 [00:00<?, ?it/s]
+2026-05-20 02:07:59,324 [INFO] reading tiff with 101 planes
+2026-05-20 02:08:00,185 [WARNING] z_axis not specified, assuming it is dim 0
+2026-05-20 02:08:00,185 [WARNING] if this is actually the channel_axis, use 'model.eval(channel_axis=0, ...)'
+2026-05-20 02:08:00,185 [INFO] multi-stack tiff read in as having 101 planes 1 channels
+2026-05-20 02:08:05,386 [INFO] resizing 3D image with rescale=0.43 and anisotropy=2.43
+2026-05-20 02:08:06,510 [INFO] running YX: 105 planes of size (1166, 1166)
+2026-05-20 02:08:06,510 [INFO] 
+2026-05-20 02:08:06,510 [INFO] 0%|          | 0/11 [00:00<?, ?it/s]
+2026-05-20 02:08:06,510 [INFO] [A
+2026-05-20 02:08:22,456 [INFO] 100%|##########| 11/11 [00:15<00:00,  1.45s/it]
+2026-05-20 02:08:23,932 [INFO] running ZY: 1166 planes of size (105, 1166)
+2026-05-20 02:08:23,932 [INFO] 
+2026-05-20 02:08:23,932 [INFO] 0%|          | 0/17 [00:00<?, ?it/s]
+2026-05-20 02:08:23,932 [INFO] [A
+2026-05-20 02:08:35,139 [INFO] 100%|##########| 17/17 [00:11<00:00,  1.52it/s]
+2026-05-20 02:08:35,965 [INFO] running ZX: 1166 planes of size (105, 1166)
+2026-05-20 02:08:35,965 [INFO] 
+2026-05-20 02:08:35,965 [INFO] 0%|          | 0/17 [00:00<?, ?it/s]
+2026-05-20 02:08:35,965 [INFO] [A
