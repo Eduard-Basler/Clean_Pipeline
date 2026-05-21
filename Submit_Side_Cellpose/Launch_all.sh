@@ -15,15 +15,15 @@ for VIEW in XY XZ YZ; do
         FLOW=-3.742
         CELLP=0.759
     elif [ "$VIEW" == "XZ" ]; then
-        BATCH=32      
-        DIAM=45.000   
-        FLOW=-2.000
-        CELLP=0.500
+        BATCH=64
+        DIAM=76.271
+        FLOW=-3.742
+        CELLP=0.759
     elif [ "$VIEW" == "YZ" ]; then
-        BATCH=32      
-        DIAM=45.000   
-        FLOW=-2.000
-        CELLP=0.500
+        BATCH=32
+        DIAM=76.271
+        FLOW=-3.742
+        CELLP=0.759
     fi
 
     for CH in 1 2 3 4; do
