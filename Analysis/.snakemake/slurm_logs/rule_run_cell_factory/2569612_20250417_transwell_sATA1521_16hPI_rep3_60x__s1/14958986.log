@@ -1,0 +1,141 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-06-17 15:11:19
+  Workflow ID: 9e05d1eb-647e-4028-96f4-797be6451e17
+  Platform: Linux-5.15.0-126-generic-x86_64-with-glibc2.35
+  Host: sca29
+  User: basler0004
+  Snakemake version: 9.23.0
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.pixi/envs/default/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile --target-jobs run_cell_factory:sample=2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_,position=s1 --allowed-rules run_cell_factory --cores all --attempt 1 --force-use-threads --wait-for-files /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.snakemake/tmp.y30r_og6 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4_cp_masks.tif /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Nuclei/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c1_cp_masks.tif /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_1/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c1.tiff /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_2/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c2.tiff /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_3/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c3.tiff /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_4/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4.tiff --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers params code mtime software-env input --conda-frontend conda --shared-fs-usage storage-local-copies sources source-cache software-deployment-cache software-deployment persistence input-output --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.pixi/envs/default/bin --runtime-source-cache-path /scicore/home/basler/basler0004/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpny07icwl --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --executor slurm-jobstep --jobs 1 --mode remote
+  Snakefile: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile
+  Base directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Run directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Working directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Config file(s): ['config.yaml']
+  Config MD5: 921e7d7430a2398d1d20d1873d78bcee
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided remote nodes: 1
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Jun 17 15:11:19 2026]
+rule run_cell_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Nuclei/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_1/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_2/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_3/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_4/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s1/clean_cell_stats.csv
+    jobid: 0
+    reason: Forced execution
+    wildcards: sample=2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_, position=s1
+    resources: tmpdir=<TBD>, disk_mb=11481, disk=11.48 GB, disk_mib=10950, mem_mb=16384, mem=16.38 GB, mem_mib=15625, runtime=30, cpus_per_task=2, slurm_partition=scicore
+
+SNAKEMAKE
+=========
+  Date: 2026-06-17 15:11:21
+  Workflow ID: 438565f3-aa6c-4f91-8090-226414659612
+  Platform: Linux-5.15.0-126-generic-x86_64-with-glibc2.35
+  Host: sca29
+  User: basler0004
+  Snakemake version: 9.23.0
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.pixi/envs/default/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile --target-jobs run_cell_factory:sample=2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_,position=s1 --allowed-rules run_cell_factory --cores all --attempt 1 --force-use-threads --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers mtime params input software-env code --conda-frontend conda --shared-fs-usage software-deployment persistence sources storage-local-copies software-deployment-cache input-output source-cache --latency-wait 5 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.pixi/envs/default/bin --runtime-source-cache-path /scicore/home/basler/basler0004/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpny07icwl --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile
+  Base directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Run directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Working directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Config file(s): ['config.yaml']
+  Config MD5: 921e7d7430a2398d1d20d1873d78bcee
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Jun 17 15:11:21 2026]
+localrule run_cell_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Nuclei/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_1/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_2/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_3/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_4/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s1/clean_cell_stats.csv
+    jobid: 0
+    reason: Forced execution
+    wildcards: sample=2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_, position=s1
+    resources: tmpdir=/scratch/basler0004/slurm-job.14958986, disk_mb=11481, disk=11.48 GB, disk_mib=10950, mem_mb=16384, mem=16.38 GB, mem_mib=15625, runtime=30, cpus_per_task=2, slurm_partition=scicore
+🚀 Initializing Optimized High-Speed Cell Factory...
+  [GPU] Sifting cell segments smaller than 5000 voxels...
+Traceback (most recent call last):
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Cell_analysis.py", line 264, in <module>
+    main()
+    ~~~~^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Cell_analysis.py", line 46, in main
+    mask_gpu, counts_gpu = filter_small_cells_gpu(raw_cell_mask, min_voxels=5000)
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Cell_analysis.py", line 17, in filter_small_cells_gpu
+    mask_gpu = cp.asarray(cell_mask_cpu)
+  File "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.pixi/envs/default/lib/python3.13/site-packages/cupy/_creation/from_data.py", line 88, in asarray
+    return _core.array(a, dtype, False, order, blocking=blocking)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "cupy/_core/core.pyx", line 2455, in cupy._core.core.array
+  File "cupy/_core/core.pyx", line 2482, in cupy._core.core.array
+  File "cupy/_core/core.pyx", line 2625, in cupy._core.core._array_default
+  File "cupy/_core/core.pyx", line 151, in cupy._core.core.ndarray.__new__
+  File "cupy/_core/core.pyx", line 239, in cupy._core.core._ndarray_base._init
+  File "cupy/cuda/memory.pyx", line 738, in cupy.cuda.memory.alloc
+  File "cupy/cuda/memory.pyx", line 1424, in cupy.cuda.memory.MemoryPool.malloc
+  File "cupy/cuda/memory.pyx", line 1444, in cupy.cuda.memory.MemoryPool.malloc
+  File "cupy/cuda/device.pyx", line 40, in cupy.cuda.device.get_device_id
+  File "cupy_backends/cuda/api/runtime.pyx", line 202, in cupy_backends.cuda.api.runtime.getDevice
+  File "cupy_backends/cuda/api/runtime.pyx", line 146, in cupy_backends.cuda.api.runtime.check_status
+cupy_backends.cuda.api.runtime.CUDARuntimeError: cudaErrorInsufficientDriver: CUDA driver version is insufficient for CUDA runtime version
+RuleException:
+CalledProcessError in file "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile", line 113:
+Command 'set -euo pipefail;  pixi run python Cell_analysis.py --cell_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4_cp_masks.tif --nuc_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Nuclei/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c1_cp_masks.tif --c1 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_1/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c1.tiff --c2 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_2/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c2.tiff --c3 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_3/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c3.tiff --c4 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_4/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4.tiff --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s1' returned non-zero exit status 1.
+[Wed Jun 17 15:11:26 2026]
+Error in rule run_cell_factory:
+    message: None
+    jobid: 0
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Nuclei/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_1/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_2/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_3/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_4/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s1/clean_cell_stats.csv
+    shell:
+        pixi run python Cell_analysis.py --cell_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4_cp_masks.tif --nuc_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Nuclei/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c1_cp_masks.tif --c1 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_1/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c1.tiff --c2 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_2/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c2.tiff --c3 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_3/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c3.tiff --c4 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_4/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4.tiff --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s1
+        (command exited with non-zero exit code)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Wed Jun 17 15:11:26 2026]
+Error in rule run_cell_factory:
+    message: None
+    jobid: 0
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Nuclei/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_1/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_2/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_3/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_4/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s1/clean_cell_stats.csv
+    shell:
+        pixi run python Cell_analysis.py --cell_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4_cp_masks.tif --nuc_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Nuclei/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c1_cp_masks.tif --c1 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_1/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c1.tiff --c2 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_2/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c2.tiff --c3 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_3/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c3.tiff --c4 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_4/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4.tiff --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s1
+        (command exited with non-zero exit code)
+Storing output in storage.
+WorkflowError:
+At least one job did not complete successfully.
+srun: error: sca29: task 0: Exited with exit code 1
+[Wed Jun 17 15:11:26 2026]
+Error in rule run_cell_factory:
+    message: None
+    jobid: 0
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Nuclei/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_1/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_2/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_3/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_4/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s1/clean_cell_stats.csv
+    shell:
+        pixi run python Cell_analysis.py --cell_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4_cp_masks.tif --nuc_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Nuclei/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c1_cp_masks.tif --c1 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_1/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c1.tiff --c2 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_2/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c2.tiff --c3 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_3/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c3.tiff --c4 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_4/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4.tiff --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s1
+        (command exited with non-zero exit code)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Wed Jun 17 15:11:26 2026]
+Error in rule run_cell_factory:
+    message: None
+    jobid: 0
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Nuclei/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_1/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_2/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_3/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_4/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s1/clean_cell_stats.csv
+    shell:
+        pixi run python Cell_analysis.py --cell_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4_cp_masks.tif --nuc_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Nuclei/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c1_cp_masks.tif --c1 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_1/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c1.tiff --c2 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_2/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c2.tiff --c3 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_3/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c3.tiff --c4 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_4/20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4.tiff --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s1
+        (command exited with non-zero exit code)
+Storing output in storage.
+WorkflowError:
+At least one job did not complete successfully.

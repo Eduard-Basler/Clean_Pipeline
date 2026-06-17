@@ -1,0 +1,43 @@
+Assuming unrestricted shared filesystem usage.
+
+SNAKEMAKE
+=========
+  Date: 2026-06-17 17:17:29
+  Workflow ID: 4ce9cd45-0467-4f19-b5bf-c08b195d3c5f
+  Platform: Linux-5.15.0-181-generic-x86_64-with-glibc2.35
+  Host: vscode
+  User: basler0004
+  Snakemake version: 9.23.0
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.pixi/envs/default/bin/snakemake --cores 1 --rerun-incomplete /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s3/clean_cell_stats.csv
+  Snakefile: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile
+  Base directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Run directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Working directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Config file(s): ['config.yaml']
+  Config MD5: 921e7d7430a2398d1d20d1873d78bcee
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                 count
+----------------  -------
+run_cell_factory        1
+total                   1
+
+Select jobs to execute...
+Execute 1 jobs...
+[Wed Jun 17 17:17:29 2026]
+localrule run_cell_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Nuclei/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_1/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_2/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_3/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_4/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s3/clean_cell_stats.csv
+    jobid: 0
+    reason: Code has changed since last execution
+    wildcards: sample=2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 17:19:32 2026]
+Finished jobid: 0 (Rule: run_cell_factory)
+1 of 1 steps (100%) done
+Complete log(s): /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.snakemake/log/2026-06-17T171727.954699.snakemake.log

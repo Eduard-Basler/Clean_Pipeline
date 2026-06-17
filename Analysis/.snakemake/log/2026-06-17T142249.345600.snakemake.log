@@ -1,0 +1,43 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-06-17 14:22:51
+  Workflow ID: 7a82f796-b490-46c5-9b86-04d1fe7f79f9
+  Platform: Linux-5.15.0-181-generic-x86_64-with-glibc2.35
+  Host: vscode
+  User: basler0004
+  Snakemake version: 9.23.0
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.pixi/envs/default/bin/snakemake --executor slurm --jobs 1 --latency-wait 60 samples_manifest.txt
+  Snakefile: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile
+  Base directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Run directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Working directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Config file(s): ['config.yaml']
+  Config MD5: 921e7d7430a2398d1d20d1873d78bcee
+
+Building DAG of jobs...
+SLURM run ID: 4a16c54c-f9f6-45b6-84c8-8af1a61d1358
+MinJobAge 300s (>= 120s). 'squeue' should work reliably for status queries.
+Using shell: /usr/bin/bash
+Provided remote nodes: 1
+Job stats:
+job                          count
+-------------------------  -------
+generate_samples_manifest        1
+total                            1
+
+Select jobs to execute...
+Execute 1 jobs...
+No SLURM account given, trying to guess.
+No account was given, not able to get a SLURM account via sacct: sacct: invalid option -- '1'
+
+Unable to guess SLURM account. Trying to proceed without.
+Job 0 has been submitted with SLURM jobid 14952129 (log: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.snakemake/slurm_logs/rule_generate_samples_manifest/14952129.log).
+Waiting at most 60 seconds for missing files:
+samples_manifest.txt (missing locally)
+[Wed Jun 17 14:23:55 2026]
+Finished jobid: 0 (Rule: generate_samples_manifest)
+1 of 1 steps (100%) done
+Cleaning up SLURM log files older than 10 day(s).
+Complete log(s): /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.snakemake/log/2026-06-17T142249.345600.snakemake.log

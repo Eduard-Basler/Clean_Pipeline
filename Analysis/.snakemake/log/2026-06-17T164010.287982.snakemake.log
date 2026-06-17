@@ -1,0 +1,29 @@
+Assuming unrestricted shared filesystem usage.
+
+SNAKEMAKE
+=========
+  Date: 2026-06-17 16:40:10
+  Workflow ID: 86c34b48-b22a-4c82-9a3c-ac5a674785af
+  Platform: Linux-5.15.0-181-generic-x86_64-with-glibc2.35
+  Host: vscode
+  User: basler0004
+  Snakemake version: 9.23.0
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.pixi/envs/default/bin/snakemake --cores 4 --jobs 100 --latency-wait 60 -f
+  Snakefile: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile
+  Base directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Run directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Working directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Config file(s): ['config.yaml']
+  Config MD5: 921e7d7430a2398d1d20d1873d78bcee
+
+Building DAG of jobs...
+IncompleteFilesException:
+The files below seem to be incomplete. If you are sure that certain files are not incomplete, mark them as complete with
+
+    snakemake --cleanup-metadata <filenames>
+
+To re-generate the files rerun your command with the --rerun-incomplete flag.
+Incomplete files:
+/scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s1/stepB_isolated_output.csv
+/scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/intermediates/s1/stepB_isolated_output.csv

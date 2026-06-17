@@ -1,0 +1,126 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-06-17 15:50:28
+  Workflow ID: cabdb21a-286b-4e88-8bb2-60190d30c69f
+  Platform: Linux-5.15.0-126-generic-x86_64-with-glibc2.35
+  Host: sca29
+  User: basler0004
+  Snakemake version: 9.23.0
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.pixi/envs/default/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile --target-jobs run_step_B:sample=2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001,position=s5 --allowed-rules run_step_B --cores all --attempt 1 --force-use-threads --wait-for-files /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.snakemake/tmp.fio5_syh /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Cells/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c4_cp_masks.tif /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c3_STR_bact.tif --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers code mtime params input software-env --conda-frontend conda --shared-fs-usage input-output software-deployment-cache storage-local-copies persistence sources software-deployment source-cache --latency-wait 60 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.pixi/envs/default/bin --runtime-source-cache-path /scicore/home/basler/basler0004/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpi0hxcrx5 --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --executor slurm-jobstep --jobs 1 --mode remote
+  Snakefile: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile
+  Base directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Run directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Working directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Config file(s): ['config.yaml']
+  Config MD5: 921e7d7430a2398d1d20d1873d78bcee
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided remote nodes: 1
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Jun 17 15:50:28 2026]
+rule run_step_B:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Cells/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s5/stepB_isolated_output.csv
+    jobid: 0
+    reason: Forced execution
+    wildcards: sample=2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001, position=s5
+    resources: tmpdir=<TBD>, disk_mb=1000, disk=1 GB, disk_mib=954, mem_mb=1000, mem=1 GB, mem_mib=954
+
+SNAKEMAKE
+=========
+  Date: 2026-06-17 15:50:30
+  Workflow ID: 5ce8af5c-5f9e-4d33-bb67-d49247c75f58
+  Platform: Linux-5.15.0-126-generic-x86_64-with-glibc2.35
+  Host: sca29
+  User: basler0004
+  Snakemake version: 9.23.0
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.pixi/envs/default/lib/python3.13/site-packages/snakemake/__main__.py --snakefile /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile --target-jobs run_step_B:sample=2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001,position=s5 --allowed-rules run_step_B --cores all --attempt 1 --force-use-threads --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers mtime input code software-env params --conda-frontend conda --shared-fs-usage storage-local-copies sources software-deployment-cache persistence source-cache software-deployment input-output --latency-wait 60 --scheduler ilp --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.pixi/envs/default/bin --runtime-source-cache-path /scicore/home/basler/basler0004/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpi0hxcrx5 --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --mode remote
+  Snakefile: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile
+  Base directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Run directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Working directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Config file(s): ['config.yaml']
+  Config MD5: 921e7d7430a2398d1d20d1873d78bcee
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Jun 17 15:50:30 2026]
+localrule run_step_B:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Cells/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s5/stepB_isolated_output.csv
+    jobid: 0
+    reason: Forced execution
+    wildcards: sample=2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001, position=s5
+    resources: tmpdir=/scratch/basler0004/slurm-job.14961204, mem_mb=1000, mem=1 GB, mem_mib=954, disk_mb=1000, disk=1 GB, disk_mib=954
+srun: Job step's --cpus-per-task value exceeds that of job (4 > 1). Job step may never run.
+srun: error: Unable to create step for job 14961204: More processors requested than permitted
+RuleException:
+CalledProcessError in file "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile", line 157:
+Command 'set -euo pipefail;  
+        srun --partition=scicore --cpus-per-task=4 --mem=64G         pixi run python Shell_distance.py             --cell_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Cells/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c4_cp_masks.tif             --bact_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c3_STR_bact.tif             --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s5' returned non-zero exit status 1.
+[Wed Jun 17 15:50:30 2026]
+Error in rule run_step_B:
+    message: None
+    jobid: 0
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Cells/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s5/stepB_isolated_output.csv
+    shell:
+        
+        srun --partition=scicore --cpus-per-task=4 --mem=64G         pixi run python Shell_distance.py             --cell_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Cells/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c4_cp_masks.tif             --bact_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c3_STR_bact.tif             --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s5
+        
+        (command exited with non-zero exit code)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Wed Jun 17 15:50:30 2026]
+Error in rule run_step_B:
+    message: None
+    jobid: 0
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Cells/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s5/stepB_isolated_output.csv
+    shell:
+        
+        srun --partition=scicore --cpus-per-task=4 --mem=64G         pixi run python Shell_distance.py             --cell_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Cells/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c4_cp_masks.tif             --bact_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c3_STR_bact.tif             --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s5
+        
+        (command exited with non-zero exit code)
+Storing output in storage.
+WorkflowError:
+At least one job did not complete successfully.
+srun: error: sca29: task 0: Exited with exit code 1
+[Wed Jun 17 15:50:31 2026]
+Error in rule run_step_B:
+    message: None
+    jobid: 0
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Cells/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s5/stepB_isolated_output.csv
+    shell:
+        
+        srun --partition=scicore --cpus-per-task=4 --mem=64G         pixi run python Shell_distance.py             --cell_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Cells/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c4_cp_masks.tif             --bact_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c3_STR_bact.tif             --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s5
+        
+        (command exited with non-zero exit code)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Wed Jun 17 15:50:31 2026]
+Error in rule run_step_B:
+    message: None
+    jobid: 0
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Cells/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s5/stepB_isolated_output.csv
+    shell:
+        
+        srun --partition=scicore --cpus-per-task=4 --mem=64G         pixi run python Shell_distance.py             --cell_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Cells/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c4_cp_masks.tif             --bact_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c3_STR_bact.tif             --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s5
+        
+        (command exited with non-zero exit code)
+Storing output in storage.
+WorkflowError:
+At least one job did not complete successfully.

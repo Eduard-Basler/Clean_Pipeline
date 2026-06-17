@@ -1,0 +1,235 @@
+import os
+import glob
+
+configfile: "config.yaml"
+SAMPLES_ROOT = config["samples_root"]
+
+# ------------------------------------------------------------------------------
+# THE "LET THE OS DO THE WORK" INPUT FUNCTIONS
+# ------------------------------------------------------------------------------
+def get_bact_mask(w): return glob.glob(os.path.join(SAMPLES_ROOT, w.sample, "Masks/Bact", f"*_{w.position}_c3_STR_bact.tif"))[0]
+def get_cell_mask(w): return glob.glob(os.path.join(SAMPLES_ROOT, w.sample, "Masks/Cells", f"*_{w.position}_c4_cp_masks.tif"))[0]
+def get_nuc_mask(w): return glob.glob(os.path.join(SAMPLES_ROOT, w.sample, "Masks/Nuclei", f"*_{w.position}_c1_cp_masks.tif"))[0]
+
+def get_raw_c1(w): return glob.glob(os.path.join(SAMPLES_ROOT, w.sample, "Raw/Channel_1", f"*_{w.position}_c1.tiff"))[0]
+def get_raw_c2(w): return glob.glob(os.path.join(SAMPLES_ROOT, w.sample, "Raw/Channel_2", f"*_{w.position}_c2.tiff"))[0]
+def get_raw_c3(w): return glob.glob(os.path.join(SAMPLES_ROOT, w.sample, "Raw/Channel_3", f"*_{w.position}_c3.tiff"))[0]
+def get_raw_c4(w): return glob.glob(os.path.join(SAMPLES_ROOT, w.sample, "Raw/Channel_4", f"*_{w.position}_c4.tiff"))[0]
+
+
+# ==============================================================================
+# LOGIN NODE PROTECTION ENGINE
+# ==============================================================================
+MANIFEST_PATH = "samples_manifest.txt"
+
+UNIQUE_SAMPLES = []
+UNIQUE_POSITIONS = []
+
+if os.path.exists(MANIFEST_PATH):
+    with open(MANIFEST_PATH, "r") as f:
+        for line in f:
+            if line.strip() and not line.startswith("#"):
+                parts = line.strip().split(",")
+                if len(parts) == 2:
+                    UNIQUE_SAMPLES.append(parts[0])
+                    UNIQUE_POSITIONS.append(parts[1])
+else:
+    UNIQUE_SAMPLES = ["SEED_SAMPLE"]
+    UNIQUE_POSITIONS = ["s1"]
+
+# ==============================================================================
+# MASTER TARGET GATES
+# ==============================================================================
+rule all:
+    input:
+        MANIFEST_PATH,
+        expand(
+            os.path.join(SAMPLES_ROOT, "{sample}/Results/final_{position}_bacteria_analysis.csv"),
+            zip, 
+            sample=UNIQUE_SAMPLES,
+            position=UNIQUE_POSITIONS
+        ) if UNIQUE_SAMPLES != ["SEED_SAMPLE"] else MANIFEST_PATH
+
+# ==============================================================================
+# JOB 0: PRE-FLIGHT COMPUTE NODE CRAWLER
+# ==============================================================================
+rule generate_samples_manifest:
+    output:
+        MANIFEST_PATH
+    shell:
+        """
+        python -c "
+import os, glob
+abs_root = os.path.abspath('{SAMPLES_ROOT}')
+search_pattern = os.path.join(abs_root, '*/Masks/Bact/CLEAN_*_s*_c3_STR_bact.tif')
+found_files = glob.glob(search_pattern)
+unique_pairs = set()
+for filepath in found_files:
+    filename = os.path.basename(filepath)
+    sample_folder = os.path.basename(os.path.dirname(os.path.dirname(os.path.dirname(filepath))))
+    pos_string = None
+    for part in filename.split('_'):
+        if part.startswith('s') and part[1:].isdigit():
+            pos_string = part
+            break
+    if sample_folder and sample_folder != 'Samples' and pos_string:
+        unique_pairs.add((sample_folder, pos_string))
+os.makedirs(os.path.dirname(os.path.abspath('{output[0]}')), exist_ok=True)
+with open('{output[0]}', 'w') as f:
+    f.write('# sample,position\\n')
+    for sample, pos in sorted(unique_pairs):
+        f.write(f'{{sample}},{{pos}}\\n')
+"
+        """
+
+# ==============================================================================
+# PHASE 1: INDEPENDENT CPU DATA FACTORIES (ROUTED VIA IN-LINE SRUN)
+# ==============================================================================
+rule run_cell_factory:
+    input:
+        cell_mask = get_cell_mask,
+        nuc_mask = get_nuc_mask,
+        c1 = get_raw_c1,
+        c2 = get_raw_c2,
+        c3 = get_raw_c3,
+        c4 = get_raw_c4
+    output:
+        os.path.join(SAMPLES_ROOT, "{sample}/Results/intermediates/{position}/clean_cell_stats.csv")
+    shell:
+        """
+        srun --partition=scicore --cpus-per-task=4 --mem=64G \
+        pixi run python Cell_analysis.py \
+            --cell_mask {input.cell_mask} \
+            --nuc_mask {input.nuc_mask} \
+            --c1 {input.c1} \
+            --c2 {input.c2} \
+            --c3 {input.c3} \
+            --c4 {input.c4} \
+            --out_dir {SAMPLES_ROOT}/{wildcards.sample}/Results/intermediates/{wildcards.position}
+        """
+
+rule run_bacteria_factory:
+    input:
+        bact_mask = get_bact_mask,
+        c1 = get_raw_c1,
+        c2 = get_raw_c2,
+        c3 = get_raw_c3,
+        c4 = get_raw_c4
+    output:
+        os.path.join(SAMPLES_ROOT, "{sample}/Results/intermediates/{position}/clean_bacteria_stats.csv")
+    shell:
+        """
+        srun --partition=a100 --qos=a100-30min --gres=gpu:1 --cpus-per-task=2 --mem=64G \
+        pixi run python Bacterial_analysis.py \
+            --bact_mask {input.bact_mask} \
+            --c1 {input.c1} \
+            --c2 {input.c2} \
+            --c3 {input.c3} \
+            --c4 {input.c4} \
+            --out_dir {SAMPLES_ROOT}/{wildcards.sample}/Results/intermediates/{wildcards.position}
+        """
+
+# ==============================================================================
+# PHASE 2: UNIFIED GEOMETRIC WORKERSPOOL
+# ==============================================================================
+rule run_step_A:
+    input:
+        c_mask = get_cell_mask,
+        b_mask = get_bact_mask
+    output:
+        os.path.join(SAMPLES_ROOT, "{sample}/Results/intermediates/{position}/stepA_isolated_output.csv")
+    shell:
+        """
+        srun --partition=a100 --qos=a100-30min --gres=gpu:1 --cpus-per-task=2 --mem=64G \
+        pixi run python Overlap_linker.py \
+            --cell_mask {input.c_mask} \
+            --bact_mask {input.b_mask} \
+            --out_dir {SAMPLES_ROOT}/{wildcards.sample}/Results/intermediates/{wildcards.position}
+        """
+
+rule run_step_B:
+    input:
+        c_mask = get_cell_mask,
+        b_mask = get_bact_mask
+    output:
+        os.path.join(SAMPLES_ROOT, "{sample}/Results/intermediates/{position}/stepB_isolated_output.csv")
+    shell:
+        """
+        srun --partition=scicore --cpus-per-task=4 --mem=64G \
+        pixi run python Shell_distance.py \
+            --cell_mask {input.c_mask} \
+            --bact_mask {input.b_mask} \
+            --out_dir {SAMPLES_ROOT}/{wildcards.sample}/Results/intermediates/{wildcards.position}
+        """
+
+rule run_step_C:
+    input:
+        cell_mask = get_cell_mask,
+        bact_mask = get_bact_mask
+    output:
+        os.path.join(SAMPLES_ROOT, "{sample}/Results/intermediates/{position}/stepC_isolated_output.csv")
+    shell:
+        """
+        srun --partition=a100 --qos=a100-30min --gres=gpu:1 --cpus-per-task=2 --mem=64G \
+        pixi run python State_classifier.py \
+            --cell_mask {input.cell_mask} \
+            --bact_mask {input.bact_mask} \
+            --out_dir {SAMPLES_ROOT}/{wildcards.sample}/Results/intermediates/{wildcards.position}
+        """
+
+rule run_step_D:
+    input:
+        b_mask = get_bact_mask
+    output:
+        os.path.join(SAMPLES_ROOT, "{sample}/Results/intermediates/{position}/stepD_isolated_output.csv")
+    shell:
+        """
+        srun --partition=scicore --cpus-per-task=4 --mem=64G \
+        pixi run python Social_and_angles.py \
+            --bact_mask {input.b_mask} \
+            --out_dir {SAMPLES_ROOT}/{wildcards.sample}/Results/intermediates/{wildcards.position}
+        """
+
+rule run_step_Cell:
+    input:
+        cell_mask = get_cell_mask,
+        classifier = os.path.join(SAMPLES_ROOT, "{sample}/Results/intermediates/{position}/stepC_isolated_output.csv")
+    output:
+        os.path.join(SAMPLES_ROOT, "{sample}/Results/intermediates/{position}/stepCell_isolated_output.csv")
+    shell:
+        """
+        srun --partition=scicore --cpus-per-task=4 --mem=64G \
+        pixi run python Cell_distance.py \
+            --cell_mask {input.cell_mask} \
+            --classifier_csv {input.classifier} \
+            --out_dir {SAMPLES_ROOT}/{wildcards.sample}/Results/intermediates/{wildcards.position}
+        """
+
+# ==============================================================================
+# PHASE 3: MASTER COLLATION GATHERING
+# ==============================================================================
+rule run_collation:
+    input:
+        clean_bact = os.path.join(SAMPLES_ROOT, "{sample}/Results/intermediates/{position}/clean_bacteria_stats.csv"),
+        clean_cell = os.path.join(SAMPLES_ROOT, "{sample}/Results/intermediates/{position}/clean_cell_stats.csv"),
+        overlap = os.path.join(SAMPLES_ROOT, "{sample}/Results/intermediates/{position}/stepA_isolated_output.csv"),
+        distance = os.path.join(SAMPLES_ROOT, "{sample}/Results/intermediates/{position}/stepB_isolated_output.csv"),
+        classifier = os.path.join(SAMPLES_ROOT, "{sample}/Results/intermediates/{position}/stepC_isolated_output.csv"),
+        social = os.path.join(SAMPLES_ROOT, "{sample}/Results/intermediates/{position}/stepD_isolated_output.csv"),
+        cell_to_cell = os.path.join(SAMPLES_ROOT, "{sample}/Results/intermediates/{position}/stepCell_isolated_output.csv")
+    output:
+        final_cell = os.path.join(SAMPLES_ROOT, "{sample}/Results/final_{position}_cell_analysis.csv"),
+        final_bact = os.path.join(SAMPLES_ROOT, "{sample}/Results/final_{position}_bacteria_analysis.csv")
+    shell:
+        """
+        srun --partition=scicore --mem=32G \
+        pixi run python Collate_analysis.py \
+            --clean_bact {input.clean_bact} \
+            --clean_cell {input.clean_cell} \
+            --overlap_csv {input.overlap} \
+            --distance_csv {input.distance} \
+            --classifier_csv {input.classifier} \
+            --social_csv {input.social} \
+            --cell_to_cell_csv {input.cell_to_cell} \
+            --out_dir {SAMPLES_ROOT}/{wildcards.sample}/Results
+        """

@@ -1,0 +1,55 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-06-17 14:07:45
+  Workflow ID: ce1f7ab9-5cf2-4d38-a260-122c88bebd63
+  Platform: Linux-5.15.0-181-generic-x86_64-with-glibc2.35
+  Host: vscode
+  User: basler0004
+  Snakemake version: 9.23.0
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.pixi/envs/default/bin/snakemake --executor slurm --jobs 1 samples_manifest.txt
+  Snakefile: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile
+  Base directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Run directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Working directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Config file(s): ['config.yaml']
+  Config MD5: 921e7d7430a2398d1d20d1873d78bcee
+
+Building DAG of jobs...
+SLURM run ID: 253dff1a-a018-44bc-a874-2edb053ad34e
+MinJobAge 300s (>= 120s). 'squeue' should work reliably for status queries.
+Using shell: /usr/bin/bash
+Provided remote nodes: 1
+Job stats:
+job                          count
+-------------------------  -------
+generate_samples_manifest        1
+total                            1
+
+Select jobs to execute...
+Execute 1 jobs...
+No SLURM account given, trying to guess.
+No account was given, not able to get a SLURM account via sacct: sacct: invalid option -- '1'
+
+Unable to guess SLURM account. Trying to proceed without.
+[Wed Jun 17 14:07:46 2026]
+Error in rule generate_samples_manifest:
+    message: SLURM sbatch failed. The error message was 'sbatch: error: invalid partition specified: single
+sbatch: error: Batch job submission failed: Invalid partition name specified'.
+    sbatch call:
+        sbatch --parsable --job-name 253dff1a-a018-44bc-a874-2edb053ad34e --output /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.snakemake/slurm_logs/rule_generate_samples_manifest/%j.log --export=ALL --comment rule_generate_samples_manifest   -p single -t 10 --mem 2048 --ntasks=1 --cpus-per-task=1 -D /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis --wrap="/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.pixi/envs/default/bin/python3.13 -m snakemake --snakefile '/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile' --target-jobs 'generate_samples_manifest:' --allowed-rules generate_samples_manifest --cores 'all' --attempt 1 --force-use-threads  --wait-for-files '/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.snakemake/tmp.zpllxmb6' --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --retries 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers mtime code input software-env params --conda-frontend 'conda' --shared-fs-usage persistence input-output storage-local-copies sources source-cache software-deployment-cache software-deployment --latency-wait 5 --scheduler 'ilp' --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path '/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.pixi/envs/default/bin' --runtime-source-cache-path '/scicore/home/basler/basler0004/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpwmcppcbc' --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --executor slurm-jobstep --jobs 1 --mode 'remote'"
+For further error details see the cluster/cloud log and the log files of the involved rule(s).
+    jobid: 0
+    output: samples_manifest.txt
+Shutting down, this might take some time.
+Cleaning up SLURM log files older than 10 day(s).
+Exiting because a job execution failed. Look below for error messages
+[Wed Jun 17 14:08:25 2026]
+Error in rule generate_samples_manifest:
+    message: None
+    jobid: 0
+    output: samples_manifest.txt
+Complete log(s): /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.snakemake/log/2026-06-17T140737.312316.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

@@ -1,0 +1,25 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-06-17 14:26:34
+  Workflow ID: 81f298a2-4cbb-4b6a-97b7-efb6092462ee
+  Platform: Linux-5.15.0-181-generic-x86_64-with-glibc2.35
+  Host: vscode
+  User: basler0004
+  Snakemake version: 9.23.0
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.pixi/envs/default/bin/snakemake --executor slurm --jobs 100 --latency-wait 60
+  Snakefile: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile
+  Base directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Run directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Working directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Config file(s): ['config.yaml']
+  Config MD5: 921e7d7430a2398d1d20d1873d78bcee
+
+Building DAG of jobs...
+MissingInputException in rule run_bacteria_factory in file "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile", line 147:
+Missing input files for rule run_bacteria_factory:
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/intermediates/s1/clean_bacteria_stats.csv
+    wildcards: sample=2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_, position=s1
+    affected files:
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Masks/Bact/CLEAN_2569602_20250417_transwell_sATA1521_16hPI_rep1_60x__s1_c3_STR_bact.tif

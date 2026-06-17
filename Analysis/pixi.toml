@@ -1,16 +1,19 @@
 [workspace]
-channels = ["conda-forge"]
-name = "Analysis"
+channels = ["conda-forge", "bioconda"]
+name = "Analysis_Final"
 platforms = ["linux-64"]
 version = "0.1.0"
 
 [tasks]
 
 [dependencies]
-python = "3.11.*"
-numpy = ">=2.4.5,<3"
-pandas = ">=3.0.3,<4"
-tifffile = ">=2026.3.3,<2027"
-scikit-image = ">=0.26.0,<0.27"
+numpy = ">=1.263"
+tifffile = ">=2026.6.1,<2027"
+python = ">=3.12"
+pandas = ">=2.0"
 scipy = ">=1.17.1,<2"
-matplotlib = ">=3.10.9,<4"
+scikit-image = ">=0.26.0,<0.27"
+snakemake = "*"
+joblib = ">=1.5.3,<2"
+cupy = ">=13.4.1,<14"
+snakemake-executor-plugin-slurm = ">=2.7.1,<3"

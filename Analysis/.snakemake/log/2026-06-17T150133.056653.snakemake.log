@@ -1,0 +1,71 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-06-17 15:01:34
+  Workflow ID: 386780eb-ae29-42c3-85c2-fdb5e5f209cd
+  Platform: Linux-5.15.0-181-generic-x86_64-with-glibc2.35
+  Host: vscode
+  User: basler0004
+  Snakemake version: 9.23.0
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.pixi/envs/default/bin/snakemake --executor slurm --jobs 100 --allowed-rules run_cell_factory --forceall
+  Snakefile: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile
+  Base directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Run directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Working directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Config file(s): ['config.yaml']
+  Config MD5: 921e7d7430a2398d1d20d1873d78bcee
+
+Building DAG of jobs...
+MissingInputException in rule all in file "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile", line 45:
+Missing input files for rule all:
+    affected files:
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/final_s5_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/final_s5_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Results/final_s5_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Results/final_s1_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Results/final_s2_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/final_s4_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Results/final_s4_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/final_s1_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Results/final_s5_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Results/final_s2_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/final_s4_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/final_s3_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Results/final_s4_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Results/final_s1_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/final_s5_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Results/final_s3_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/final_s5_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/final_s4_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/final_s2_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/final_s1_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/final_s1_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Results/final_s4_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/final_s5_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/final_s2_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Results/final_s1_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/final_s3_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Results/final_s1_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/final_s1_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/final_s4_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/final_s5_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Results/final_s2_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/final_s3_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/final_s2_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Results/final_s3_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Results/final_s3_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Results/final_s5_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/final_s2_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Results/final_s4_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/final_s1_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Results/final_s2_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/final_s4_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/final_s3_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/final_s3_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Results/final_s3_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/final_s2_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/final_s1_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/final_s4_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/final_s2_bacteria_analysis.csv
+        /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/final_s3_bacteria_analysis.csv

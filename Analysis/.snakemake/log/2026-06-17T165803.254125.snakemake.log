@@ -1,0 +1,1005 @@
+Assuming unrestricted shared filesystem usage.
+
+SNAKEMAKE
+=========
+  Date: 2026-06-17 16:58:04
+  Workflow ID: 2056dace-3a72-4dc8-814b-1ca6f7e68165
+  Platform: Linux-5.15.0-181-generic-x86_64-with-glibc2.35
+  Host: vscode
+  User: basler0004
+  Snakemake version: 9.23.0
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.pixi/envs/default/bin/snakemake --cores 4 --jobs 100 --latency-wait 60 --rerun-incomplete
+  Snakefile: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile
+  Base directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Run directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Working directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Config file(s): ['config.yaml']
+  Config MD5: 921e7d7430a2398d1d20d1873d78bcee
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job                          count
+-------------------------  -------
+generate_samples_manifest        1
+run_bacteria_factory            37
+run_cell_factory                42
+run_step_A                      41
+run_step_B                      32
+run_step_C                      39
+run_step_Cell                   49
+run_step_D                      37
+run_collation                   49
+all                              1
+total                          328
+
+Select jobs to execute...
+Execute 100 jobs...
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_D:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Masks/Bact/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s1_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/intermediates/s1/stepD_isolated_output.csv
+    jobid: 328
+    reason: Code has changed since last execution
+    wildcards: sample=2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002, position=s1
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_cell_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Nuclei/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_1/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_2/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_3/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_4/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s3/clean_cell_stats.csv
+    jobid: 260
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s3/clean_cell_stats.csv; Code has changed since last execution
+    wildcards: sample=2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_bacteria_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s1_c3_STR_bact.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Raw/Channel_1/20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s1_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Raw/Channel_2/20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s1_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Raw/Channel_3/20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s1_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Raw/Channel_4/20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s1_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Results/intermediates/s1/clean_bacteria_stats.csv
+    jobid: 123
+    reason: Code has changed since last execution
+    wildcards: sample=2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_, position=s1
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_A:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep1_60x__s3_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep1_60x__s3_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/intermediates/s3/stepA_isolated_output.csv
+    jobid: 21
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/intermediates/s3/stepA_isolated_output.csv
+    wildcards: sample=2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_A:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s3/stepA_isolated_output.csv
+    jobid: 261
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s3/stepA_isolated_output.csv
+    wildcards: sample=2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_A:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Masks/Cells/CLEAN_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001_s1_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Masks/Bact/CLEAN_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001_s1_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Results/intermediates/s1/stepA_isolated_output.csv
+    jobid: 365
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Results/intermediates/s1/stepA_isolated_output.csv
+    wildcards: sample=2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001, position=s1
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_A:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s4_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s4_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/intermediates/s4/stepA_isolated_output.csv
+    jobid: 229
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/intermediates/s4/stepA_isolated_output.csv
+    wildcards: sample=2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005, position=s4
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_C:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep1_60x__s3_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep1_60x__s3_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/intermediates/s3/stepC_isolated_output.csv
+    jobid: 23
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/intermediates/s3/stepC_isolated_output.csv
+    wildcards: sample=2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_C:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s3/stepC_isolated_output.csv
+    jobid: 263
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s3/stepC_isolated_output.csv
+    wildcards: sample=2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_cell_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Nuclei/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_1/20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_2/20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_3/20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_4/20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s2/clean_cell_stats.csv
+    jobid: 92
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s2/clean_cell_stats.csv
+    wildcards: sample=2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_, position=s2
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_bacteria_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Masks/Bact/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c3_STR_bact.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_1/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_2/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_3/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_4/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Results/intermediates/s3/clean_bacteria_stats.csv
+    jobid: 299
+    reason: Code has changed since last execution
+    wildcards: sample=2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_D:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep1_60x__s3_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/intermediates/s3/stepD_isolated_output.csv
+    jobid: 24
+    reason: Code has changed since last execution
+    wildcards: sample=2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_bacteria_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep2_60x_001_s3_c3_STR_bact.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Raw/Channel_1/20250417_transwell_sATA1521_16hPI_rep2_60x_001_s3_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Raw/Channel_2/20250417_transwell_sATA1521_16hPI_rep2_60x_001_s3_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Raw/Channel_3/20250417_transwell_sATA1521_16hPI_rep2_60x_001_s3_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Raw/Channel_4/20250417_transwell_sATA1521_16hPI_rep2_60x_001_s3_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Results/intermediates/s3/clean_bacteria_stats.csv
+    jobid: 59
+    reason: Code has changed since last execution
+    wildcards: sample=2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_cell_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Cells/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Nuclei/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Raw/Channel_1/20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Raw/Channel_2/20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Raw/Channel_3/20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Raw/Channel_4/20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s5/clean_cell_stats.csv
+    jobid: 196
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s5/clean_cell_stats.csv; Code has changed since last execution
+    wildcards: sample=2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001, position=s5
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_D:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s3/stepD_isolated_output.csv
+    jobid: 264
+    reason: Code has changed since last execution
+    wildcards: sample=2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_A:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s2/stepA_isolated_output.csv
+    jobid: 93
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s2/stepA_isolated_output.csv; Code has changed since last execution
+    wildcards: sample=2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_, position=s2
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_B:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s4_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s4_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/intermediates/s4/stepB_isolated_output.csv
+    jobid: 230
+    reason: Code has changed since last execution
+    wildcards: sample=2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005, position=s4
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_A:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Masks/Cells/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s2_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Masks/Bact/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s2_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/intermediates/s2/stepA_isolated_output.csv
+    jobid: 333
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/intermediates/s2/stepA_isolated_output.csv; Code has changed since last execution
+    wildcards: sample=2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002, position=s2
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_C:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Masks/Cells/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s1_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s1_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Results/intermediates/s1/stepC_isolated_output.csv
+    jobid: 127
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Results/intermediates/s1/stepC_isolated_output.csv; Code has changed since last execution
+    wildcards: sample=2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_, position=s1
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_C:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Masks/Cells/CLEAN_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001_s1_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Masks/Bact/CLEAN_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001_s1_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Results/intermediates/s1/stepC_isolated_output.csv
+    jobid: 367
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Results/intermediates/s1/stepC_isolated_output.csv
+    wildcards: sample=2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001, position=s1
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_cell_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Masks/Cells/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Masks/Nuclei/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_1/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_2/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_3/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_4/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Results/intermediates/s3/clean_cell_stats.csv
+    jobid: 300
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Results/intermediates/s3/clean_cell_stats.csv; Code has changed since last execution
+    wildcards: sample=2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_B:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s2/stepB_isolated_output.csv
+    jobid: 94
+    reason: Code has changed since last execution
+    wildcards: sample=2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_, position=s2
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_cell_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep2_60x_001_s3_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Masks/Nuclei/CLEAN_20250417_transwell_sATA1521_16hPI_rep2_60x_001_s3_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Raw/Channel_1/20250417_transwell_sATA1521_16hPI_rep2_60x_001_s3_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Raw/Channel_2/20250417_transwell_sATA1521_16hPI_rep2_60x_001_s3_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Raw/Channel_3/20250417_transwell_sATA1521_16hPI_rep2_60x_001_s3_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Raw/Channel_4/20250417_transwell_sATA1521_16hPI_rep2_60x_001_s3_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Results/intermediates/s3/clean_cell_stats.csv
+    jobid: 60
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Results/intermediates/s3/clean_cell_stats.csv; Code has changed since last execution
+    wildcards: sample=2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_A:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Cells/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s5/stepA_isolated_output.csv
+    jobid: 197
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s5/stepA_isolated_output.csv; Code has changed since last execution
+    wildcards: sample=2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001, position=s5
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_C:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s4_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s4_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/intermediates/s4/stepC_isolated_output.csv
+    jobid: 231
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/intermediates/s4/stepC_isolated_output.csv; Code has changed since last execution
+    wildcards: sample=2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005, position=s4
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_B:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Masks/Cells/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s2_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Masks/Bact/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s2_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/intermediates/s2/stepB_isolated_output.csv
+    jobid: 334
+    reason: Code has changed since last execution
+    wildcards: sample=2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002, position=s2
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_D:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s1_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Results/intermediates/s1/stepD_isolated_output.csv
+    jobid: 128
+    reason: Code has changed since last execution
+    wildcards: sample=2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_, position=s1
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_D:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Masks/Bact/CLEAN_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001_s1_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Results/intermediates/s1/stepD_isolated_output.csv
+    jobid: 368
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Results/intermediates/s1/stepD_isolated_output.csv
+    wildcards: sample=2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001, position=s1
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_bacteria_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s1_c3_STR_bact.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Raw/Channel_1/20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s1_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Raw/Channel_2/20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s1_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Raw/Channel_3/20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s1_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Raw/Channel_4/20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s1_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s1/clean_bacteria_stats.csv
+    jobid: 163
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s1/clean_bacteria_stats.csv
+    wildcards: sample=2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001, position=s1
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_C:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s2/stepC_isolated_output.csv
+    jobid: 95
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s2/stepC_isolated_output.csv
+    wildcards: sample=2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_, position=s2
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_D:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s4_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/intermediates/s4/stepD_isolated_output.csv
+    jobid: 232
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/intermediates/s4/stepD_isolated_output.csv
+    wildcards: sample=2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005, position=s4
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_A:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep2_60x_001_s3_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep2_60x_001_s3_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Results/intermediates/s3/stepA_isolated_output.csv
+    jobid: 61
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Results/intermediates/s3/stepA_isolated_output.csv
+    wildcards: sample=2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_B:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Cells/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s5_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s5/stepB_isolated_output.csv
+    jobid: 198
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s5/stepB_isolated_output.csv
+    wildcards: sample=2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001, position=s5
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_cell_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s4_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Nuclei/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s4_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_1/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s4_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_2/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s4_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_3/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s4_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_4/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s4_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s4/clean_cell_stats.csv
+    jobid: 268
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s4/clean_cell_stats.csv
+    wildcards: sample=2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006, position=s4
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_A:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Masks/Cells/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Masks/Bact/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Results/intermediates/s3/stepA_isolated_output.csv
+    jobid: 301
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Results/intermediates/s3/stepA_isolated_output.csv
+    wildcards: sample=2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_bacteria_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep1_60x__s4_c3_STR_bact.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Raw/Channel_1/20250417_transwell_sATA1521_16hPI_rep1_60x__s4_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Raw/Channel_2/20250417_transwell_sATA1521_16hPI_rep1_60x__s4_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Raw/Channel_3/20250417_transwell_sATA1521_16hPI_rep1_60x__s4_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Raw/Channel_4/20250417_transwell_sATA1521_16hPI_rep1_60x__s4_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/intermediates/s4/clean_bacteria_stats.csv
+    jobid: 27
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/intermediates/s4/clean_bacteria_stats.csv
+    wildcards: sample=2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_, position=s4
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_C:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Masks/Cells/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s2_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Masks/Bact/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s2_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/intermediates/s2/stepC_isolated_output.csv
+    jobid: 335
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/intermediates/s2/stepC_isolated_output.csv
+    wildcards: sample=2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002, position=s2
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_cell_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Cells/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s1_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Nuclei/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s1_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Raw/Channel_1/20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s1_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Raw/Channel_2/20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s1_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Raw/Channel_3/20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s1_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Raw/Channel_4/20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s1_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s1/clean_cell_stats.csv
+    jobid: 164
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s1/clean_cell_stats.csv; Code has changed since last execution
+    wildcards: sample=2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001, position=s1
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_D:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Masks/Bact/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Results/intermediates/s3/stepD_isolated_output.csv
+    jobid: 304
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Results/intermediates/s3/stepD_isolated_output.csv
+    wildcards: sample=2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_cell_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s3_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Nuclei/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s3_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_1/20250417_transwell_sATA1521_16hPI_rep3_60x__s3_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_2/20250417_transwell_sATA1521_16hPI_rep3_60x__s3_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_3/20250417_transwell_sATA1521_16hPI_rep3_60x__s3_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_4/20250417_transwell_sATA1521_16hPI_rep3_60x__s3_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s3/clean_cell_stats.csv
+    jobid: 100
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s3/clean_cell_stats.csv
+    wildcards: sample=2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_A:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s5_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s5_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/intermediates/s5/stepA_isolated_output.csv
+    jobid: 237
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/intermediates/s5/stepA_isolated_output.csv
+    wildcards: sample=2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005, position=s5
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_cell_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Masks/Cells/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s3_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Masks/Nuclei/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s3_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Raw/Channel_1/20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s3_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Raw/Channel_2/20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s3_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Raw/Channel_3/20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s3_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Raw/Channel_4/20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s3_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/intermediates/s3/clean_cell_stats.csv
+    jobid: 340
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/intermediates/s3/clean_cell_stats.csv
+    wildcards: sample=2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_bacteria_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Masks/Bact/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s4_c3_STR_bact.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_1/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s4_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_2/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s4_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_3/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s4_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_4/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s4_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Results/intermediates/s4/clean_bacteria_stats.csv
+    jobid: 307
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Results/intermediates/s4/clean_bacteria_stats.csv
+    wildcards: sample=2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001, position=s4
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_D:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep1_60x__s4_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/intermediates/s4/stepD_isolated_output.csv
+    jobid: 32
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/intermediates/s4/stepD_isolated_output.csv
+    wildcards: sample=2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_, position=s4
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_bacteria_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep2_60x_001_s4_c3_STR_bact.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Raw/Channel_1/20250417_transwell_sATA1521_16hPI_rep2_60x_001_s4_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Raw/Channel_2/20250417_transwell_sATA1521_16hPI_rep2_60x_001_s4_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Raw/Channel_3/20250417_transwell_sATA1521_16hPI_rep2_60x_001_s4_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Raw/Channel_4/20250417_transwell_sATA1521_16hPI_rep2_60x_001_s4_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Results/intermediates/s4/clean_bacteria_stats.csv
+    jobid: 67
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Results/intermediates/s4/clean_bacteria_stats.csv
+    wildcards: sample=2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001, position=s4
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_cell_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s1_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Nuclei/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s1_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Raw/Channel_1/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s1_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Raw/Channel_2/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s1_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Raw/Channel_3/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s1_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Raw/Channel_4/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s1_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/intermediates/s1/clean_cell_stats.csv
+    jobid: 204
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/intermediates/s1/clean_cell_stats.csv
+    wildcards: sample=2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005, position=s1
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_D:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s4_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s4/stepD_isolated_output.csv
+    jobid: 272
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s4/stepD_isolated_output.csv
+    wildcards: sample=2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006, position=s4
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_A:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s3_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s3_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s3/stepA_isolated_output.csv
+    jobid: 101
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s3/stepA_isolated_output.csv
+    wildcards: sample=2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_B:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s5_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s5_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/intermediates/s5/stepB_isolated_output.csv
+    jobid: 238
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/intermediates/s5/stepB_isolated_output.csv
+    wildcards: sample=2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005, position=s5
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_C:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Masks/Cells/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s2_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s2_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Results/intermediates/s2/stepC_isolated_output.csv
+    jobid: 135
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Results/intermediates/s2/stepC_isolated_output.csv
+    wildcards: sample=2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_, position=s2
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_A:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Masks/Cells/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s3_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Masks/Bact/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s3_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/intermediates/s3/stepA_isolated_output.csv
+    jobid: 341
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/intermediates/s3/stepA_isolated_output.csv
+    wildcards: sample=2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_C:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Masks/Cells/CLEAN_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001_s2_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Masks/Bact/CLEAN_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001_s2_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Results/intermediates/s2/stepC_isolated_output.csv
+    jobid: 375
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Results/intermediates/s2/stepC_isolated_output.csv
+    wildcards: sample=2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001, position=s2
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_A:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Cells/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s3_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s3_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s3/stepA_isolated_output.csv
+    jobid: 181
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s3/stepA_isolated_output.csv; Code has changed since last execution
+    wildcards: sample=2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_B:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s3_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s3_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s3/stepB_isolated_output.csv
+    jobid: 102
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s3/stepB_isolated_output.csv
+    wildcards: sample=2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_C:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s5_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s5_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/intermediates/s5/stepC_isolated_output.csv
+    jobid: 239
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/intermediates/s5/stepC_isolated_output.csv
+    wildcards: sample=2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005, position=s5
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_cell_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep2_60x_001_s4_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Masks/Nuclei/CLEAN_20250417_transwell_sATA1521_16hPI_rep2_60x_001_s4_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Raw/Channel_1/20250417_transwell_sATA1521_16hPI_rep2_60x_001_s4_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Raw/Channel_2/20250417_transwell_sATA1521_16hPI_rep2_60x_001_s4_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Raw/Channel_3/20250417_transwell_sATA1521_16hPI_rep2_60x_001_s4_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Raw/Channel_4/20250417_transwell_sATA1521_16hPI_rep2_60x_001_s4_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Results/intermediates/s4/clean_cell_stats.csv
+    jobid: 68
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Results/intermediates/s4/clean_cell_stats.csv
+    wildcards: sample=2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001, position=s4
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_A:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s1_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s1_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/intermediates/s1/stepA_isolated_output.csv
+    jobid: 205
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/intermediates/s1/stepA_isolated_output.csv
+    wildcards: sample=2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005, position=s1
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_cell_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Masks/Cells/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s4_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Masks/Nuclei/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s4_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_1/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s4_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_2/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s4_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_3/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s4_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_4/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s4_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Results/intermediates/s4/clean_cell_stats.csv
+    jobid: 308
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Results/intermediates/s4/clean_cell_stats.csv
+    wildcards: sample=2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001, position=s4
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_D:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s2_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Results/intermediates/s2/stepD_isolated_output.csv
+    jobid: 136
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Results/intermediates/s2/stepD_isolated_output.csv
+    wildcards: sample=2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_, position=s2
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_B:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Masks/Cells/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s3_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Masks/Bact/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s3_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/intermediates/s3/stepB_isolated_output.csv
+    jobid: 342
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/intermediates/s3/stepB_isolated_output.csv
+    wildcards: sample=2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_bacteria_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s2_c3_STR_bact.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Raw/Channel_1/20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s2_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Raw/Channel_2/20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s2_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Raw/Channel_3/20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s2_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Raw/Channel_4/20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s2_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s2/clean_bacteria_stats.csv
+    jobid: 171
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s2/clean_bacteria_stats.csv
+    wildcards: sample=2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001, position=s2
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_D:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Masks/Bact/CLEAN_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001_s2_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Results/intermediates/s2/stepD_isolated_output.csv
+    jobid: 376
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Results/intermediates/s2/stepD_isolated_output.csv
+    wildcards: sample=2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001, position=s2
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_bacteria_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep1_60x__s5_c3_STR_bact.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Raw/Channel_1/20250417_transwell_sATA1521_16hPI_rep1_60x__s5_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Raw/Channel_2/20250417_transwell_sATA1521_16hPI_rep1_60x__s5_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Raw/Channel_3/20250417_transwell_sATA1521_16hPI_rep1_60x__s5_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Raw/Channel_4/20250417_transwell_sATA1521_16hPI_rep1_60x__s5_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/intermediates/s5/clean_bacteria_stats.csv
+    jobid: 35
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/intermediates/s5/clean_bacteria_stats.csv
+    wildcards: sample=2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_, position=s5
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_C:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s3_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s3_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s3/stepC_isolated_output.csv
+    jobid: 103
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s3/stepC_isolated_output.csv
+    wildcards: sample=2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_A:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep2_60x_001_s4_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep2_60x_001_s4_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Results/intermediates/s4/stepA_isolated_output.csv
+    jobid: 69
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Results/intermediates/s4/stepA_isolated_output.csv
+    wildcards: sample=2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001, position=s4
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_B:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s1_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s1_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/intermediates/s1/stepB_isolated_output.csv
+    jobid: 206
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/intermediates/s1/stepB_isolated_output.csv
+    wildcards: sample=2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005, position=s1
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_cell_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s5_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Nuclei/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s5_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_1/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s5_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_2/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s5_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_3/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s5_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_4/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s5_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s5/clean_cell_stats.csv
+    jobid: 276
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s5/clean_cell_stats.csv
+    wildcards: sample=2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006, position=s5
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_cell_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Masks/Cells/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s1_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Masks/Nuclei/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s1_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Raw/Channel_1/20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s1_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Raw/Channel_2/20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s1_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Raw/Channel_3/20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s1_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Raw/Channel_4/20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s1_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/intermediates/s1/clean_cell_stats.csv
+    jobid: 324
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/intermediates/s1/clean_cell_stats.csv
+    wildcards: sample=2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002, position=s1
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_Cell:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep2_60x_001_s1_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Results/intermediates/s1/stepC_isolated_output.csv
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Results/intermediates/s1/stepCell_isolated_output.csv
+    jobid: 49
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Results/intermediates/s1/stepCell_isolated_output.csv
+    wildcards: sample=2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001, position=s1
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_Cell:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Masks/Cells/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s1_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Results/intermediates/s1/stepC_isolated_output.csv
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Results/intermediates/s1/stepCell_isolated_output.csv
+    jobid: 289
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Results/intermediates/s1/stepCell_isolated_output.csv
+    wildcards: sample=2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001, position=s1
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_D:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s2_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s2/stepD_isolated_output.csv
+    jobid: 256
+    reason: Forced execution
+    wildcards: sample=2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006, position=s2
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_bacteria_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep2_60x_001_s2_c3_STR_bact.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Raw/Channel_1/20250417_transwell_sATA1521_16hPI_rep2_60x_001_s2_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Raw/Channel_2/20250417_transwell_sATA1521_16hPI_rep2_60x_001_s2_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Raw/Channel_3/20250417_transwell_sATA1521_16hPI_rep2_60x_001_s2_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Raw/Channel_4/20250417_transwell_sATA1521_16hPI_rep2_60x_001_s2_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Results/intermediates/s2/clean_bacteria_stats.csv
+    jobid: 51
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Results/intermediates/s2/clean_bacteria_stats.csv
+    wildcards: sample=2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001, position=s2
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_bacteria_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Masks/Bact/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s2_c3_STR_bact.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_1/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s2_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_2/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s2_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_3/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s2_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_4/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s2_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Results/intermediates/s2/clean_bacteria_stats.csv
+    jobid: 291
+    reason: Forced execution
+    wildcards: sample=2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001, position=s2
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_B:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s3_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s3_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/intermediates/s3/stepB_isolated_output.csv
+    jobid: 222
+    reason: Forced execution
+    wildcards: sample=2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_A:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s1/stepA_isolated_output.csv
+    jobid: 85
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s1/stepA_isolated_output.csv
+    wildcards: sample=2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_, position=s1
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_C:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s5_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s5_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s5/stepC_isolated_output.csv
+    jobid: 119
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s5/stepC_isolated_output.csv
+    wildcards: sample=2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_, position=s5
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_Cell:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Masks/Cells/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s4_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Results/intermediates/s4/stepC_isolated_output.csv
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Results/intermediates/s4/stepCell_isolated_output.csv
+    jobid: 153
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Results/intermediates/s4/stepCell_isolated_output.csv
+    wildcards: sample=2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_, position=s4
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_cell_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Cells/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s4_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Nuclei/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s4_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Raw/Channel_1/20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s4_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Raw/Channel_2/20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s4_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Raw/Channel_3/20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s4_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Raw/Channel_4/20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s4_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s4/clean_cell_stats.csv
+    jobid: 188
+    reason: Forced execution
+    wildcards: sample=2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001, position=s4
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_Cell:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Masks/Cells/CLEAN_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001_s4_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Results/intermediates/s4/stepC_isolated_output.csv
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Results/intermediates/s4/stepCell_isolated_output.csv
+    jobid: 393
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Results/intermediates/s4/stepCell_isolated_output.csv
+    wildcards: sample=2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001, position=s4
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_A:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Cells/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s4_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s4_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s4/stepA_isolated_output.csv
+    jobid: 189
+    reason: Forced execution
+    wildcards: sample=2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001, position=s4
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_Cell:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s2_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s2/stepC_isolated_output.csv
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s2/stepCell_isolated_output.csv
+    jobid: 257
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s2/stepCell_isolated_output.csv
+    wildcards: sample=2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006, position=s2
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_B:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Masks/Cells/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s1_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Masks/Bact/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s1_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/intermediates/s1/stepB_isolated_output.csv
+    jobid: 326
+    reason: Forced execution
+    wildcards: sample=2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002, position=s1
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_C:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s3_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s3_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/intermediates/s3/stepC_isolated_output.csv
+    jobid: 223
+    reason: Forced execution
+    wildcards: sample=2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_B:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s1/stepB_isolated_output.csv
+    jobid: 86
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s1/stepB_isolated_output.csv
+    wildcards: sample=2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_, position=s1
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_Cell:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep1_60x__s2_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/intermediates/s2/stepC_isolated_output.csv
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/intermediates/s2/stepCell_isolated_output.csv
+    jobid: 17
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/intermediates/s2/stepCell_isolated_output.csv
+    wildcards: sample=2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_, position=s2
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_cell_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Masks/Cells/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s2_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Masks/Nuclei/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s2_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_1/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s2_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_2/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s2_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_3/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s2_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_4/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s2_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Results/intermediates/s2/clean_cell_stats.csv
+    jobid: 292
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Results/intermediates/s2/clean_cell_stats.csv
+    wildcards: sample=2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001, position=s2
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_D:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s5_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s5/stepD_isolated_output.csv
+    jobid: 120
+    reason: Forced execution
+    wildcards: sample=2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_, position=s5
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_cell_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep2_60x_001_s2_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Masks/Nuclei/CLEAN_20250417_transwell_sATA1521_16hPI_rep2_60x_001_s2_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Raw/Channel_1/20250417_transwell_sATA1521_16hPI_rep2_60x_001_s2_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Raw/Channel_2/20250417_transwell_sATA1521_16hPI_rep2_60x_001_s2_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Raw/Channel_3/20250417_transwell_sATA1521_16hPI_rep2_60x_001_s2_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Raw/Channel_4/20250417_transwell_sATA1521_16hPI_rep2_60x_001_s2_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Results/intermediates/s2/clean_cell_stats.csv
+    jobid: 52
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Results/intermediates/s2/clean_cell_stats.csv
+    wildcards: sample=2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001, position=s2
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_bacteria_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s5_c3_STR_bact.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Raw/Channel_1/20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s5_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Raw/Channel_2/20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s5_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Raw/Channel_3/20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s5_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Raw/Channel_4/20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s5_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Results/intermediates/s5/clean_bacteria_stats.csv
+    jobid: 155
+    reason: Forced execution
+    wildcards: sample=2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_, position=s5
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_D:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Masks/Bact/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s5_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/intermediates/s5/stepD_isolated_output.csv
+    jobid: 360
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/intermediates/s5/stepD_isolated_output.csv
+    wildcards: sample=2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002, position=s5
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_C:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Masks/Cells/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s1_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Masks/Bact/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s1_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/intermediates/s1/stepC_isolated_output.csv
+    jobid: 327
+    reason: Forced execution
+    wildcards: sample=2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002, position=s1
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_A:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep2_60x_001_s2_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep2_60x_001_s2_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001/Results/intermediates/s2/stepA_isolated_output.csv
+    jobid: 53
+    reason: Forced execution
+    wildcards: sample=2569607_20250417_transwell_sATA1521_16hPI_rep2_60x_001, position=s2
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_A:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Masks/Cells/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s2_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Masks/Bact/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s2_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Results/intermediates/s2/stepA_isolated_output.csv
+    jobid: 293
+    reason: Forced execution
+    wildcards: sample=2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001, position=s2
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_bacteria_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep1_60x__s3_c3_STR_bact.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Raw/Channel_1/20250417_transwell_sATA1521_16hPI_rep1_60x__s3_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Raw/Channel_2/20250417_transwell_sATA1521_16hPI_rep1_60x__s3_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Raw/Channel_3/20250417_transwell_sATA1521_16hPI_rep1_60x__s3_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Raw/Channel_4/20250417_transwell_sATA1521_16hPI_rep1_60x__s3_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/intermediates/s3/clean_bacteria_stats.csv
+    jobid: 19
+    reason: Forced execution
+    wildcards: sample=2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:09 2026]
+localrule run_step_C:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s1_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s1/stepC_isolated_output.csv
+    jobid: 87
+    reason: Forced execution
+    wildcards: sample=2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_, position=s1
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:10 2026]
+localrule run_step_D:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s3_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/intermediates/s3/stepD_isolated_output.csv
+    jobid: 224
+    reason: Forced execution
+    wildcards: sample=2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:10 2026]
+localrule run_bacteria_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c3_STR_bact.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_1/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_2/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_3/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_4/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s3/clean_bacteria_stats.csv
+    jobid: 259
+    reason: Forced execution
+    wildcards: sample=2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006, position=s3
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:10 2026]
+localrule run_cell_factory:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Masks/Cells/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s5_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Masks/Nuclei/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s5_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Raw/Channel_1/20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s5_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Raw/Channel_2/20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s5_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Raw/Channel_3/20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s5_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Raw/Channel_4/20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s5_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Results/intermediates/s5/clean_cell_stats.csv
+    jobid: 156
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Results/intermediates/s5/clean_cell_stats.csv
+    wildcards: sample=2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_, position=s5
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:10 2026]
+localrule run_step_Cell:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Masks/Cells/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002_s5_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/intermediates/s5/stepC_isolated_output.csv
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/intermediates/s5/stepCell_isolated_output.csv
+    jobid: 361
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002/Results/intermediates/s5/stepCell_isolated_output.csv
+    wildcards: sample=2789302_20251219_transwell_sATA2130_24hPI_60xOIL_rep3_002, position=s5
+    resources: tmpdir=/scratch
+[Wed Jun 17 16:58:10 2026]
+localrule run_step_B:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Cells/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s4_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s4_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s4/stepB_isolated_output.csv
+    jobid: 190
+    reason: Forced execution
+    wildcards: sample=2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001, position=s4
+    resources: tmpdir=/scratch
+Select jobs to execute...
+[Wed Jun 17 17:00:31 2026]
+Finished jobid: 328 (Rule: run_step_D)
+1 of 328 steps (0.3%) done
+Execute 1 jobs...
+[Wed Jun 17 17:00:31 2026]
+localrule run_step_C:
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Cells/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s4_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001_s4_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s4/stepC_isolated_output.csv
+    jobid: 191
+    reason: Missing output files: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001/Results/intermediates/s4/stepC_isolated_output.csv; Code has changed since last execution
+    wildcards: sample=2710380_20251010_transwell_sATA1944_1947_24hPI_60x_rep2_001, position=s4
+    resources: tmpdir=/scratch
+Select jobs to execute...
+RuleException:
+CalledProcessError in file "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile", line 99:
+Command 'set -euo pipefail;  
+        srun --partition=a100 --qos=a100-30min --gres=gpu:1 --cpus-per-task=2 --mem=64G         pixi run python Cell_analysis.py             --cell_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c4_cp_masks.tif             --nuc_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Nuclei/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c1_cp_masks.tif             --c1 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_1/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c1.tiff             --c2 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_2/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c2.tiff             --c3 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_3/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c3.tiff             --c4 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_4/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c4.tiff             --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s3' returned non-zero exit status 1.
+[Wed Jun 17 17:00:59 2026]
+Error in rule run_cell_factory:
+    message: None
+    jobid: 260
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Nuclei/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_1/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_2/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_3/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_4/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s3/clean_cell_stats.csv
+    shell:
+        
+        srun --partition=a100 --qos=a100-30min --gres=gpu:1 --cpus-per-task=2 --mem=64G         pixi run python Cell_analysis.py             --cell_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c4_cp_masks.tif             --nuc_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Nuclei/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c1_cp_masks.tif             --c1 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_1/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c1.tiff             --c2 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_2/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c2.tiff             --c3 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_3/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c3.tiff             --c4 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Raw/Channel_4/20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c4.tiff             --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s3
+        
+        (command exited with non-zero exit code)
+Terminating processes on user request, this might take some time.
+RuleException:
+CalledProcessError in file "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile", line 142:
+Command 'set -euo pipefail;  
+        srun --partition=a100 --qos=a100-30min --gres=gpu:1 --cpus-per-task=2 --mem=64G         pixi run python Overlap_linker.py             --cell_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c4_cp_masks.tif             --bact_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c3_STR_bact.tif             --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s3' returned non-zero exit status 1.
+[Wed Jun 17 17:01:04 2026]
+Error in rule run_step_A:
+    message: None
+    jobid: 261
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s3/stepA_isolated_output.csv
+    shell:
+        
+        srun --partition=a100 --qos=a100-30min --gres=gpu:1 --cpus-per-task=2 --mem=64G         pixi run python Overlap_linker.py             --cell_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c4_cp_masks.tif             --bact_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c3_STR_bact.tif             --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s3
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile", line 142:
+Command 'set -euo pipefail;  
+        srun --partition=a100 --qos=a100-30min --gres=gpu:1 --cpus-per-task=2 --mem=64G         pixi run python Overlap_linker.py             --cell_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Masks/Cells/CLEAN_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001_s1_c4_cp_masks.tif             --bact_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Masks/Bact/CLEAN_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001_s1_c3_STR_bact.tif             --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Results/intermediates/s1' returned non-zero exit status 1.
+[Wed Jun 17 17:01:04 2026]
+Error in rule run_step_A:
+    message: None
+    jobid: 365
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Masks/Cells/CLEAN_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001_s1_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Masks/Bact/CLEAN_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001_s1_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Results/intermediates/s1/stepA_isolated_output.csv
+    shell:
+        
+        srun --partition=a100 --qos=a100-30min --gres=gpu:1 --cpus-per-task=2 --mem=64G         pixi run python Overlap_linker.py             --cell_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Masks/Cells/CLEAN_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001_s1_c4_cp_masks.tif             --bact_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Masks/Bact/CLEAN_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001_s1_c3_STR_bact.tif             --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2828586_20260210_tw_sATA1946_sATA2044_16hPI_rep3_60xOIL_001/Results/intermediates/s1
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile", line 172:
+Command 'set -euo pipefail;  
+        srun --partition=a100 --qos=a100-30min --gres=gpu:1 --cpus-per-task=2 --mem=64G         pixi run python State_classifier.py             --cell_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep1_60x__s3_c4_cp_masks.tif             --bact_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep1_60x__s3_c3_STR_bact.tif             --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/intermediates/s3' returned non-zero exit status 1.
+RuleException:
+CalledProcessError in file "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile", line 142:
+Command 'set -euo pipefail;  
+        srun --partition=a100 --qos=a100-30min --gres=gpu:1 --cpus-per-task=2 --mem=64G         pixi run python Overlap_linker.py             --cell_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s4_c4_cp_masks.tif             --bact_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s4_c3_STR_bact.tif             --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/intermediates/s4' returned non-zero exit status 1.
+[Wed Jun 17 17:01:04 2026]
+Error in rule run_step_C:
+    message: None
+    jobid: 23
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep1_60x__s3_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep1_60x__s3_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/intermediates/s3/stepC_isolated_output.csv
+    shell:
+        
+        srun --partition=a100 --qos=a100-30min --gres=gpu:1 --cpus-per-task=2 --mem=64G         pixi run python State_classifier.py             --cell_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep1_60x__s3_c4_cp_masks.tif             --bact_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep1_60x__s3_c3_STR_bact.tif             --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/intermediates/s3
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile", line 121:
+Command 'set -euo pipefail;  
+        srun --partition=a100 --qos=a100-30min --gres=gpu:1 --cpus-per-task=2 --mem=64G         pixi run python Bacterial_analysis.py             --bact_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Masks/Bact/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c3_STR_bact.tif             --c1 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_1/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c1.tiff             --c2 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_2/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c2.tiff             --c3 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_3/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c3.tiff             --c4 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_4/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c4.tiff             --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Results/intermediates/s3' returned non-zero exit status 1.
+[Wed Jun 17 17:01:04 2026]
+Error in rule run_step_A:
+    message: None
+    jobid: 229
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s4_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s4_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/intermediates/s4/stepA_isolated_output.csv
+    shell:
+        
+        srun --partition=a100 --qos=a100-30min --gres=gpu:1 --cpus-per-task=2 --mem=64G         pixi run python Overlap_linker.py             --cell_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s4_c4_cp_masks.tif             --bact_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005_s4_c3_STR_bact.tif             --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783158_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep1_005/Results/intermediates/s4
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile", line 121:
+Command 'set -euo pipefail;  
+        srun --partition=a100 --qos=a100-30min --gres=gpu:1 --cpus-per-task=2 --mem=64G         pixi run python Bacterial_analysis.py             --bact_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s1_c3_STR_bact.tif             --c1 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Raw/Channel_1/20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s1_c1.tiff             --c2 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Raw/Channel_2/20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s1_c2.tiff             --c3 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Raw/Channel_3/20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s1_c3.tiff             --c4 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Raw/Channel_4/20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s1_c4.tiff             --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Results/intermediates/s1' returned non-zero exit status 1.
+RuleException:
+CalledProcessError in file "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile", line 99:
+Command 'set -euo pipefail;  
+        srun --partition=a100 --qos=a100-30min --gres=gpu:1 --cpus-per-task=2 --mem=64G         pixi run python Cell_analysis.py             --cell_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c4_cp_masks.tif             --nuc_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Nuclei/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c1_cp_masks.tif             --c1 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_1/20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c1.tiff             --c2 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_2/20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c2.tiff             --c3 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_3/20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c3.tiff             --c4 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_4/20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c4.tiff             --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s2' returned non-zero exit status 1.
+[Wed Jun 17 17:01:04 2026]
+Error in rule run_bacteria_factory:
+    message: None
+    jobid: 299
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Masks/Bact/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c3_STR_bact.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_1/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_2/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_3/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_4/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Results/intermediates/s3/clean_bacteria_stats.csv
+    shell:
+        
+        srun --partition=a100 --qos=a100-30min --gres=gpu:1 --cpus-per-task=2 --mem=64G         pixi run python Bacterial_analysis.py             --bact_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Masks/Bact/CLEAN_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c3_STR_bact.tif             --c1 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_1/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c1.tiff             --c2 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_2/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c2.tiff             --c3 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_3/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c3.tiff             --c4 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Raw/Channel_4/20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001_s3_c4.tiff             --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2789297_20251219_transwell_sATA2130_24hPI_60xOIL_rep2_001/Results/intermediates/s3
+        
+        (command exited with non-zero exit code)
+[Wed Jun 17 17:01:04 2026]
+Error in rule run_bacteria_factory:
+    message: None
+    jobid: 123
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s1_c3_STR_bact.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Raw/Channel_1/20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s1_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Raw/Channel_2/20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s1_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Raw/Channel_3/20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s1_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Raw/Channel_4/20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s1_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Results/intermediates/s1/clean_bacteria_stats.csv
+    shell:
+        
+        srun --partition=a100 --qos=a100-30min --gres=gpu:1 --cpus-per-task=2 --mem=64G         pixi run python Bacterial_analysis.py             --bact_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Masks/Bact/CLEAN_20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s1_c3_STR_bact.tif             --c1 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Raw/Channel_1/20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s1_c1.tiff             --c2 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Raw/Channel_2/20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s1_c2.tiff             --c3 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Raw/Channel_3/20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s1_c3.tiff             --c4 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Raw/Channel_4/20251010_transwell_sATA1944_1947_24hPI_60x_rep1__s1_c4.tiff             --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2710362_20251010_transwell_sATA1944_1947_24hPI_60x_rep1_/Results/intermediates/s1
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile", line 172:
+Command 'set -euo pipefail;  
+        srun --partition=a100 --qos=a100-30min --gres=gpu:1 --cpus-per-task=2 --mem=64G         pixi run python State_classifier.py             --cell_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c4_cp_masks.tif             --bact_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c3_STR_bact.tif             --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s3' returned non-zero exit status 1.
+RuleException:
+CalledProcessError in file "/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile", line 142:
+Command 'set -euo pipefail;  
+        srun --partition=a100 --qos=a100-30min --gres=gpu:1 --cpus-per-task=2 --mem=64G         pixi run python Overlap_linker.py             --cell_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep1_60x__s3_c4_cp_masks.tif             --bact_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep1_60x__s3_c3_STR_bact.tif             --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/intermediates/s3' returned non-zero exit status 1.
+[Wed Jun 17 17:01:04 2026]
+Error in rule run_cell_factory:
+    message: None
+    jobid: 92
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Nuclei/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c1_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_1/20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c1.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_2/20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c2.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_3/20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c3.tiff, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_4/20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c4.tiff
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s2/clean_cell_stats.csv
+    shell:
+        
+        srun --partition=a100 --qos=a100-30min --gres=gpu:1 --cpus-per-task=2 --mem=64G         pixi run python Cell_analysis.py             --cell_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c4_cp_masks.tif             --nuc_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Masks/Nuclei/CLEAN_20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c1_cp_masks.tif             --c1 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_1/20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c1.tiff             --c2 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_2/20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c2.tiff             --c3 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_3/20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c3.tiff             --c4 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Raw/Channel_4/20250417_transwell_sATA1521_16hPI_rep3_60x__s2_c4.tiff             --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s2
+        
+        (command exited with non-zero exit code)
+[Wed Jun 17 17:01:04 2026]
+Error in rule run_step_C:
+    message: None
+    jobid: 263
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s3/stepC_isolated_output.csv
+    shell:
+        
+        srun --partition=a100 --qos=a100-30min --gres=gpu:1 --cpus-per-task=2 --mem=64G         pixi run python State_classifier.py             --cell_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Cells/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c4_cp_masks.tif             --bact_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Masks/Bact/CLEAN_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006_s3_c3_STR_bact.tif             --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2783167_20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006/Results/intermediates/s3
+        
+        (command exited with non-zero exit code)
+[Wed Jun 17 17:01:04 2026]
+Error in rule run_step_A:
+    message: None
+    jobid: 21
+    input: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep1_60x__s3_c4_cp_masks.tif, /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep1_60x__s3_c3_STR_bact.tif
+    output: /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/intermediates/s3/stepA_isolated_output.csv
+    shell:
+        
+        srun --partition=a100 --qos=a100-30min --gres=gpu:1 --cpus-per-task=2 --mem=64G         pixi run python Overlap_linker.py             --cell_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Masks/Cells/CLEAN_20250417_transwell_sATA1521_16hPI_rep1_60x__s3_c4_cp_masks.tif             --bact_mask /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Masks/Bact/CLEAN_20250417_transwell_sATA1521_16hPI_rep1_60x__s3_c3_STR_bact.tif             --out_dir /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569602_20250417_transwell_sATA1521_16hPI_rep1_60x_/Results/intermediates/s3
+        
+        (command exited with non-zero exit code)

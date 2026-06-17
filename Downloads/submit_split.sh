@@ -8,13 +8,12 @@
 #SBATCH --error=logs/split_%j.err
 #SBATCH --qos=6hours
 
-# The arguments passed via sbatch go here:
 INPUT_FILE=$1
-CHANNEL=$2
+OUTPUT_PATTERN=$2
 
-# Construct the command
-if [ -n "$CHANNEL" ]; then
-    pixi run python Python_Split.py -channel "$CHANNEL" "$INPUT_FILE" "$HOME/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/{name}/Channel_%c/{name}_s%s_c%c.tiff"
-else
-    pixi run python Python_Split.py "$INPUT_FILE" "$HOME/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Input/TIFF/{name}/Channel_%c/{name}_s%s_c%c.tiff"
-fi
+SCRIPT_DIR="/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Downloads"
+
+cd $SCRIPT_DIR
+
+# Pass the input file and output pattern directly to the Python script
+pixi run python $SCRIPT_DIR/Python_Split.py "$INPUT_FILE" "$OUTPUT_PATTERN"

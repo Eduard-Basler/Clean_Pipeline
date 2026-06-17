@@ -1,0 +1,8 @@
+# SciCore Cluster Root Path Directories
+samples_root: "/scicore/home/basler/GROUP/Alejandro_Results/Samples"
+
+# Microscope Resolution Scaling Factors (Physical micrometers per voxel step)
+resolution:
+  spacing_z: 0.2
+  spacing_y: 0.111
+  spacing_x: 0.111

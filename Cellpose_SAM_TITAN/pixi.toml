@@ -9,6 +9,10 @@ pip = "*"
 packaging = "*"
 numpy = ">=1.24,<2.0"
 scipy = "1.11.*"
+tifffile = ">=2026.3.3,<2027"
+cuda-nvrtc = "12.1.*"
+cuda-runtime = "12.1.*"
+
 [pypi-dependencies]
 cellpose = "*"
 torch = { version = "==2.4.1+cu121", index = "https://download.pytorch.org/whl/cu121" }
@@ -33,3 +37,4 @@ dask_jobqueue = "*"
 bokeh = "*"
 fill-voids = "*"
 qtpy = "*"
+cellstitch-cuda = ">=1.5.7, <2"

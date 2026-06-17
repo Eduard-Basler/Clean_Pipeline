@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=Batch_Calib_A100
+#SBATCH --job-name=cp_SAM_C3
 #SBATCH --partition=a100-80g
 #SBATCH --qos=a100-30min
 #SBATCH --time=00:30:00

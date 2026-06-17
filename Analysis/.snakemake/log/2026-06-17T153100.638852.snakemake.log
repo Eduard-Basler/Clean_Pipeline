@@ -1,0 +1,37 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-06-17 15:31:01
+  Workflow ID: aaf67d43-d2a9-4645-9592-155650ddde25
+  Platform: Linux-5.15.0-181-generic-x86_64-with-glibc2.35
+  Host: vscode
+  User: basler0004
+  Snakemake version: 9.23.0
+  Python version: 3.13.14 | packaged by conda-forge | (main, Jun 12 2026, 09:50:25) [GCC 14.3.0]
+  Command: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.pixi/envs/default/bin/snakemake --executor slurm --jobs 1 /scicore/home/basler/GROUP/Alejandro_Results/Samples/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x_/Results/intermediates/s1/clean_cell_stats.csv
+  Snakefile: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/Snakefile
+  Base directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Run directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Working directory: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis
+  Config file(s): ['config.yaml']
+  Config MD5: 921e7d7430a2398d1d20d1873d78bcee
+
+Building DAG of jobs...
+SLURM run ID: eb841660-20c2-41f8-b691-e27fe5efe1e3
+MinJobAge 300s (>= 120s). 'squeue' should work reliably for status queries.
+Using shell: /usr/bin/bash
+Provided remote nodes: 1
+Job stats:
+job                 count
+----------------  -------
+run_cell_factory        1
+total                   1
+
+Select jobs to execute...
+Execute 1 jobs...
+Job 0 has been submitted with SLURM jobid 14960316 (log: /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.snakemake/slurm_logs/rule_run_cell_factory/2569612_20250417_transwell_sATA1521_16hPI_rep3_60x__s1/14960316.log).
+Terminating processes on user request, this might take some time.
+Cleaning up SLURM log files older than 10 day(s).
+Complete log(s): /scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/Analysis/.snakemake/log/2026-06-17T153100.638852.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

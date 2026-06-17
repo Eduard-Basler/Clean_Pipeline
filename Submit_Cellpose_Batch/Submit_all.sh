@@ -3,8 +3,8 @@
 # ==========================================
 # 1. SET YOUR TARGETS HERE
 # ==========================================
-TARGET_SERIES="s1"
-TARGET_STATE="Raw"
+TARGET_SERIES="$1"  #s1
+TARGET_STATE="$2"   #"Raw" or "Denoised"
 
 # Set to a specific folder name to test, or "*" to run every single folder
 TARGET_EXP="20251212_transwell_sATA1946_sATA2044_16hPI_60xOIL_rep2_006"
@@ -39,24 +39,24 @@ for EXP_PATH in "$INPUT_BASE"/$TARGET_EXP; do
     
     mkdir -p "$NUC_OUT/CP3_3d" "$NUC_OUT/CP3_Stitch" "$NUC_OUT/CPSAM_3d" "$NUC_OUT/CPSAM_Stitch"
     # Launch pointing directly to their isolated folders
-    sbatch Submit_CP3_Cell_3d.sh      "$NUC_FILE" "$NUC_OUT/CP3_3d"
-    sbatch Submit_CP3_Cell_Stitch.sh  "$NUC_FILE" "$NUC_OUT/CP3_Stitch"
-    sbatch Submit_CPSAM_Cell_3d.sh    "$NUC_FILE" "$NUC_OUT/CPSAM_3d"
-    sbatch Submit_CPSAM_Cell_Stitch.sh "$NUC_FILE" "$NUC_OUT/CPSAM_Stitch"
+    sbatch Submit_CP3_NUC_3d.sh      "$NUC_FILE" "$NUC_OUT/CP3_3d"
+    sbatch Submit_CP3_NUC_Stitch.sh  "$NUC_FILE" "$NUC_OUT/CP3_Stitch"
+    sbatch Submit_CPSAM_NUC_3d.sh    "$NUC_FILE" "$NUC_OUT/CPSAM_3d"
+    sbatch Submit_CPSAM_NUC_Stitch.sh "$NUC_FILE" "$NUC_OUT/CPSAM_Stitch"
 
 
     # ----------------------------------------
-    # ACTIN (Channel 4)
+    # CELL (Channel 4)
     # ----------------------------------------
-    ACTIN_FILE=$(eval echo "$INPUT_BASE/$EXPERIMENT/$TARGET_STATE/Channel_4/*_${TARGET_SERIES}_c4.tiff")
-    ACTIN_OUT="$OUTPUT_BASE/$EXPERIMENT/$TARGET_STATE/Channel_4/Series_$NUM"
+    CELL_FILE=$(eval echo "$INPUT_BASE/$EXPERIMENT/$TARGET_STATE/Channel_4/*_${TARGET_SERIES}_c4.tiff")
+    CELL_OUT="$OUTPUT_BASE/$EXPERIMENT/$TARGET_STATE/Channel_4/Series_$NUM"
     
-    mkdir -p "$ACTIN_OUT/CP3_3d" "$ACTIN_OUT/CP3_Stitch" "$ACTIN_OUT/CPSAM_3d" "$ACTIN_OUT/CPSAM_Stitch"
+    mkdir -p "$CELL_OUT/CP3_3d" "$CELL_OUT/CP3_Stitch" "$CELL_OUT/CPSAM_3d" "$CELL_OUT/CPSAM_Stitch"
     # Launch pointing directly to their isolated folders
-    sbatch Submit_CP3_Cell_3d.sh      "$ACTIN_FILE" "$ACTIN_OUT/CP3_3d"
-    sbatch Submit_CP3_Cell_Stitch.sh   "$ACTIN_FILE" "$ACTIN_OUT/CP3_Stitch"
-    sbatch Submit_CPSAM_Cell_3d.sh    "$ACTIN_FILE" "$ACTIN_OUT/CPSAM_3d"
-    sbatch Submit_CPSAM_Cell_Stitch.sh "$ACTIN_FILE" "$ACTIN_OUT/CPSAM_Stitch"
+    sbatch Submit_CP3_Cell_3d.sh      "$CELL_FILE" "$CELL_OUT/CP3_3d"
+    sbatch Submit_CP3_Cell_Stitch.sh   "$CELL_FILE" "$CELL_OUT/CP3_Stitch"
+    sbatch Submit_CPSAM_Cell_3d.sh    "$CELL_FILE" "$CELL_OUT/CPSAM_3d"
+    sbatch Submit_CPSAM_Cell_Stitch.sh "$CELL_FILE" "$CELL_OUT/CPSAM_Stitch"
 
 done
 

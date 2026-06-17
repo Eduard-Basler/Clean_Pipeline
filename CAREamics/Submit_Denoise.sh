@@ -1,19 +1,30 @@
 #!/bin/bash
-#SBATCH --job-name=N2V2_A100_Predict
+#SBATCH --job-name=N2V2_Predict
 #SBATCH --partition=a100            
 #SBATCH --qos=a100-30min           
 #SBATCH --time=00:30:00             
 #SBATCH --gres=gpu:1                
 #SBATCH --mem=64G                   
 #SBATCH --cpus-per-task=4   
-#SBATCH --output=logs/split_%j.out
-#SBATCH --error=logs/split_%j.err        
+#SBATCH --output=logs/denoise_%j.out
+#SBATCH --error=logs/denoise_%j.err        
 
-cd $HOME/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics
+RAW_CH_DIR=$1
+OUT_CH_DIR=$2
+CKPT=$3
 
-SCRIPT_PATH="$HOME/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/Denoise.py"
+SCRIPT_DIR="/scicore/home/basler/basler0004/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics"
+cd "$SCRIPT_DIR"
 
-pixi run python "$HOME/Imaging_Project_sciCORE/CLEAN/Pipeline_Final/Scripts/CAREamics/Denoise.py" \
-    --predict_source "$1" \
-    --checkpoint "$2" \
-    --output_dir "$3"
+mkdir -p "$OUT_CH_DIR"
+
+# Loop through the TIFFs in this specific channel
+for FILE in "$RAW_CH_DIR"/*.tif*; do
+    [ -e "$FILE" ] || continue
+    echo "Denoising $FILE..."
+    
+    pixi run python Denoise.py \
+        --predict_source "$FILE" \
+        --checkpoint "$CKPT" \
+        --output_dir "$OUT_CH_DIR"
+done
