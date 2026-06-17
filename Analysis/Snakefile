@@ -231,5 +231,6 @@ rule run_collation:
             --classifier_csv {input.classifier} \
             --social_csv {input.social} \
             --cell_to_cell_csv {input.cell_to_cell} \
+            --position_id {wildcards.position} \
             --out_dir {SAMPLES_ROOT}/{wildcards.sample}/Results
         """

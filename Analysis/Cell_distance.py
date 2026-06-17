@@ -67,7 +67,7 @@ def main():
         for val in df_class['Contested_in_Cells_Raw'].dropna().astype(str):
             if val.strip() and val != 'nan':
                 for c in val.split(';'):
-                    infected_cells.add(int(c))
+                    infected_cells.add(int(float(c)))
 
     print("🌲 Running Edge-to-Edge Transmission Analysis via Optimized 'Exclude Yourself' Trees...")
     dist_to_nearest_inf = []
