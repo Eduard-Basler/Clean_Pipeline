@@ -61,13 +61,19 @@ def main():
     cell_clouds = {cid: c_pts_um[c_labels == cid] for cid in unique_cell_ids}
 
     # 2. Identify infected cells from Step C output
-    df_class = pd.read_csv(args.classifier_csv)
     infected_cells = set()
-    if 'Contested_in_Cells_Raw' in df_class.columns:
-        for val in df_class['Contested_in_Cells_Raw'].dropna().astype(str):
-            if val.strip() and val != 'nan':
-                for c in val.split(';'):
-                    infected_cells.add(int(float(c)))
+    
+    # Robust Check: Ensure the file exists and is not empty before parsing
+    if os.path.exists(args.classifier_csv) and os.path.getsize(args.classifier_csv) > 0:
+        df_class = pd.read_csv(args.classifier_csv)
+        
+        if 'Contested_in_Cells_Raw' in df_class.columns:
+            for val in df_class['Contested_in_Cells_Raw'].dropna().astype(str):
+                if val.strip() and val != 'nan':
+                    for c in val.split(';'):
+                        infected_cells.add(int(float(c)))
+    else:
+        print("⚠️ Classifier CSV is empty or missing. Proceeding with zero infected cells.")
 
     print("🌲 Running Edge-to-Edge Transmission Analysis via Optimized 'Exclude Yourself' Trees...")
     dist_to_nearest_inf = []
